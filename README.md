@@ -8,6 +8,8 @@ Requires Neovim >= 0.7 (or >= 0.5 with the `0.5-compat` branch)
 
 Feline is a Lua statusline plugin that prioritizes speed, customizability and minimalism. It's fast and never gets in your way. Feline only provides you with the necessary tools that you need to customize the statusline to your liking and avoids feature-bloat. It's also extremely customizable and allows you to configure it in any way you wish to. Feline also has reasonable defaults for those who don't want to configure things and just want a good out of the box experience.
 
+The author of `feline.nvim` has stepped down from maintaining this project.  This fork aims to server as the new home for this plugin per [reddit discussion](https://www.reddit.com/r/neovim/comments/116av04/comment/j99m5hj/?context=3).
+
 ## Features
 
 - Ease-of-use.
