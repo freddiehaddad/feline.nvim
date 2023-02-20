@@ -1,14 +1,23 @@
 # feline.nvim
 
-A minimal, stylish and customizable statusline / winbar for Neovim written in Lua
+A minimal, stylish and customizable statusline / winbar for Neovim written in
+Lua
 
 Requires Neovim >= 0.7 (or >= 0.5 with the `0.5-compat` branch)
 
 ## About
 
-Feline is a Lua statusline plugin that prioritizes speed, customizability and minimalism. It's fast and never gets in your way. Feline only provides you with the necessary tools that you need to customize the statusline to your liking and avoids feature-bloat. It's also extremely customizable and allows you to configure it in any way you wish to. Feline also has reasonable defaults for those who don't want to configure things and just want a good out of the box experience.
+Feline is a Lua statusline plugin that prioritizes speed, customizability and
+minimalism. It's fast and never gets in your way. Feline only provides you with
+the necessary tools that you need to customize the statusline to your liking and
+avoids feature-bloat. It's also extremely customizable and allows you to
+configure it in any way you wish to. Feline also has reasonable defaults for
+those who don't want to configure things and just want a good out of the box
+experience.
 
-The author of `feline.nvim` has stepped down from maintaining this project.  This fork aims to server as the new home for this plugin per [reddit discussion](https://www.reddit.com/r/neovim/comments/116av04/comment/j99m5hj/?context=3).
+The author of `feline.nvim` has stepped down from maintaining this project. This
+fork aims to server as the new home for this plugin per
+[reddit discussion](https://www.reddit.com/r/neovim/comments/116av04/comment/j99m5hj/?context=3).
 
 ## Features
 
@@ -19,28 +28,37 @@ The author of `feline.nvim` has stepped down from maintaining this project.  Thi
   - Vi-mode
   - File info
   - Cursor position
-  - Diagnostics (using [Neovim's built-in LSP](https://neovim.io/doc/user/lsp.html))
-  - Git branch and diffs (using [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim/))
+  - Diagnostics (using
+    [Neovim's built-in LSP](https://neovim.io/doc/user/lsp.html))
+  - Git branch and diffs (using
+    [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim/))
 
   and many more
 
-- Minimalistic, only provides the bare minimum and allows the user to build their own components very easily.
+- Minimalistic, only provides the bare minimum and allows the user to build
+  their own components very easily.
 - Winbar support.
 
 ## Requirements
 
 - Necessary
   - Neovim v0.7 or greater (v0.5 or greater if using the `0.5-compat` branch)
-  - You must have 24-bit RGB color enabled in Neovim (do `:help 'termguicolors'` in Neovim for more info)
+  - You must have 24-bit RGB color enabled in Neovim (do `:help 'termguicolors'`
+    in Neovim for more info)
 - Optional
   - Neovim v0.8 or greater - For winbar support
-  - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons/) - For icon support
-  - [A patched font](https://github.com/ryanoasis/nerd-fonts/) - For icon support
-  - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim/) - For [git providers](#git)
+  - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons/) - For
+    icon support
+  - [A patched font](https://github.com/ryanoasis/nerd-fonts/) - For icon
+    support
+  - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim/) - For
+    [git providers](#git)
 
 ## Screenshots
 
-**NOTE: Some of these configurations may be outdated and may need to be changed prior to use. A few of the configurations are missing a link because the link to them was removed due to the link no longer being valid.**
+**NOTE: Some of these configurations may be outdated and may need to be changed
+prior to use. A few of the configurations are missing a link because the link to
+them was removed due to the link no longer being valid.**
 
 **Default setup:**
 ![image](https://user-images.githubusercontent.com/29580810/114544000-d3028400-9c7b-11eb-856c-2feb166334b2.png)
@@ -80,7 +98,8 @@ The author of `feline.nvim` has stepped down from maintaining this project.  Thi
 **[Config by iBhagwan:](https://github.com/ibhagwan/nvim-lua/blob/main/lua/plugins/feline.lua)**
 ![image](https://user-images.githubusercontent.com/59988195/133922136-3d037c37-7a3f-4e1b-b42e-c50b22fedfdb.png)
 
-**[Config by EdenEast](https://github.com/EdenEast/nyx/blob/8a9819e/config/.config/nvim/lua/eden/modules/ui/feline/init.lua)** (Colors generated from applied colorscheme)
+**[Config by EdenEast](https://github.com/EdenEast/nyx/blob/8a9819e/config/.config/nvim/lua/eden/modules/ui/feline/init.lua)**
+(Colors generated from applied colorscheme)
 
 **Nightfox**
 ![image](https://user-images.githubusercontent.com/2746374/137549252-333f074e-47a0-464f-ac8a-7ce0ee43433c.png)
@@ -97,7 +116,8 @@ The author of `feline.nvim` has stepped down from maintaining this project.  Thi
 **[Config by Dharmx](https://gist.github.com/dharmx/47139967b0c4303572e3742af725300c)**
 ![image](https://user-images.githubusercontent.com/80379926/205459030-1ef38f4f-b364-43ea-876e-db98549c38cd.png)
 
-You can add your own configuration to this list. If you're interested, simply make a [Pull Request](CONTRIBUTING.md) and I'll add it.
+You can add your own configuration to this list. If you're interested, simply
+make a [Pull Request](CONTRIBUTING.md) and I'll add it.
 
 ## Installation
 
@@ -115,7 +135,17 @@ Plug 'feline-nvim/feline.nvim'
 
 ### Using a compatibility branch
 
-Feline has compatibility branches which are versions that have compatibility with an older Neovim version. The compatibility branches are old and usually don't contain the latest changes to Feline, though the changes may occasionally be backported. However, these branches are useful if you don't have the currently required minimum version of Neovim to use Feline. The compatibility branches are named like `{neovim-version}-compat` where `{neovim-version}` is the version of Neovim it maintains compatibility with. For example, the `0.5-compat` branch is compatible with Neovim 0.5. Note that there may not be a compatibility branch for all versions and there may be gaps in the compatibility versions. Here's how you can install a compatibility branch instead of the master branch:
+Feline has compatibility branches which are versions that have compatibility
+with an older Neovim version. The compatibility branches are old and usually
+don't contain the latest changes to Feline, though the changes may occasionally
+be backported. However, these branches are useful if you don't have the
+currently required minimum version of Neovim to use Feline. The compatibility
+branches are named like `{neovim-version}-compat` where `{neovim-version}` is
+the version of Neovim it maintains compatibility with. For example, the
+`0.5-compat` branch is compatible with Neovim 0.5. Note that there may not be a
+compatibility branch for all versions and there may be gaps in the compatibility
+versions. Here's how you can install a compatibility branch instead of the
+master branch:
 
 - [packer.nvim](https://github.com/wbthomason/packer.nvim/):
 
@@ -129,19 +159,24 @@ use { 'feline-nvim/feline.nvim', branch = '0.5-compat' }
 Plug 'feline-nvim/feline.nvim', { 'branch': '0.5-compat' }
 ```
 
-Compatibility branches for versions that are 4 or more (minor) versions older than the latest Neovim version may be removed at any time, so use them at your own risk.
+Compatibility branches for versions that are 4 or more (minor) versions older
+than the latest Neovim version may be removed at any time, so use them at your
+own risk.
 
 ## Getting started
 
 ### Using the default configuration
 
-Once you've installed Feline, it's extremely easy to get started with it. If you don't mind using the default settings, you can just call Feline's `setup()` function in your configuration. Like this:
+Once you've installed Feline, it's extremely easy to get started with it. If you
+don't mind using the default settings, you can just call Feline's `setup()`
+function in your configuration. Like this:
 
 ```lua
 require('feline').setup()
 ```
 
-And that's it! It's as easy as that. If you want to set up the `'winbar'` alongside the statusline, just add this line next to the previous line:
+And that's it! It's as easy as that. If you want to set up the `'winbar'`
+alongside the statusline, just add this line next to the previous line:
 
 ```lua
 require('feline').winbar.setup()
@@ -149,7 +184,13 @@ require('feline').winbar.setup()
 
 ### Configuring Feline to fit your needs
 
-If the default configuration doesn't fit your needs and you want to build your own statusline configuration, it's highly recommended to configure Feline to suit your needs. The only prerequisite is knowing the basics of Lua. Feline provides a ton of configuration options which can let you build your statusline exactly how you want it as long. To see how to do that, take a look at [USAGE](USAGE.md) or use `:help feline.txt` inside Neovim to read the USAGE documentation.
+If the default configuration doesn't fit your needs and you want to build your
+own statusline configuration, it's highly recommended to configure Feline to
+suit your needs. The only prerequisite is knowing the basics of Lua. Feline
+provides a ton of configuration options which can let you build your statusline
+exactly how you want it as long. To see how to do that, take a look at
+[USAGE](USAGE.md) or use `:help feline.txt` inside Neovim to read the USAGE
+documentation.
 
 ## Help
 
@@ -157,36 +198,73 @@ If the default configuration doesn't fit your needs and you want to build your o
 
 #### Feline crashes or disappears for seemingly no reason
 
-This can be caused if you forget to remove your other statusline plugins after installing Feline. Make sure all other statusline plugins are removed before you install Feline, that should fix the issue.
+This can be caused if you forget to remove your other statusline plugins after
+installing Feline. Make sure all other statusline plugins are removed before you
+install Feline, that should fix the issue.
 
 ### Reporting issues or feature requests
 
-If you have an issue that you can't find the fix to in the documentation or want to request a feature you think is absolutely necessary, feel free to make a new [Issue](https://github.com/feline-nvim/feline.nvim/issues) and I will try my best to look into it. If you want to contribute to Feline, you can make a Pull Request. For more details, please see: [CONTRIBUTING](CONTRIBUTING.md)
+If you have an issue that you can't find the fix to in the documentation or want
+to request a feature you think is absolutely necessary, feel free to make a new
+[Issue](https://github.com/feline-nvim/feline.nvim/issues) and I will try my
+best to look into it. If you want to contribute to Feline, you can make a Pull
+Request. For more details, please see: [CONTRIBUTING](CONTRIBUTING.md)
 
 ## Why Feline?
 
-Now, you might be thinking, why do we need another statusline plugin? We've already got a bunch of brilliant statusline plugins like galaxyline, airline, lualine, expressline etc. and all of them are excellent. So then, why Feline?
+Now, you might be thinking, why do we need another statusline plugin? We've
+already got a bunch of brilliant statusline plugins like galaxyline, airline,
+lualine, expressline etc. and all of them are excellent. So then, why Feline?
 
-I'd like to preface this by saying that what I'm about to say can be (and probably is) very biased and opinionated. Take what's being said here with a grain of salt. All of this is purely my opinion and not a fact by any means, so it's fine to disagree. Moreover, any statement I make here may be incorrect or outdated. In which case, please feel free to make an [Issue or Pull Request](CONTRIBUTING.md) correcting it.
+I'd like to preface this by saying that what I'm about to say can be (and
+probably is) very biased and opinionated. Take what's being said here with a
+grain of salt. All of this is purely my opinion and not a fact by any means, so
+it's fine to disagree. Moreover, any statement I make here may be incorrect or
+outdated. In which case, please feel free to make an
+[Issue or Pull Request](CONTRIBUTING.md) correcting it.
 
-I think that despite those plugins being neat, each have their own shortcomings. I find those shortcomings as too much to ignore. For example, most of the statusline plugins are not very customizable and the plugins only provide a limited amount of tools and options for customization. Feline, on the other hand, is built for customizability from the ground up. You are not limited in any way by what the plugin provides. You can control every individual component and its location, appearance, everything about it.
+I think that despite those plugins being neat, each have their own shortcomings.
+I find those shortcomings as too much to ignore. For example, most of the
+statusline plugins are not very customizable and the plugins only provide a
+limited amount of tools and options for customization. Feline, on the other
+hand, is built for customizability from the ground up. You are not limited in
+any way by what the plugin provides. You can control every individual component
+and its location, appearance, everything about it.
 
-Feline is also fast and never gets in your way. It lazy-loads most of its modules, which allows it to start up instantly. Statusline updates with Feline are also blazing fast, which provides for a really smooth experience.
+Feline is also fast and never gets in your way. It lazy-loads most of its
+modules, which allows it to start up instantly. Statusline updates with Feline
+are also blazing fast, which provides for a really smooth experience.
 
-Feline is minimal and only implements the bare minimum required for you to get started. It both expects and invites you to make your own components and providers, because nobody understands you better than yourself. To help you do that, Feline provides all the tools and options you would need while also giving you a solid foundation to build from. One could say that the real goal of Feline is to make creating your own statusline as easy for you as possible, while also providing reasonable defaults that should be enough for most people.
+Feline is minimal and only implements the bare minimum required for you to get
+started. It both expects and invites you to make your own components and
+providers, because nobody understands you better than yourself. To help you do
+that, Feline provides all the tools and options you would need while also giving
+you a solid foundation to build from. One could say that the real goal of Feline
+is to make creating your own statusline as easy for you as possible, while also
+providing reasonable defaults that should be enough for most people.
 
-Documentation is another aspect where I found most statusline plugins to be very lacking. Feline is extremely easy to configure and well-documented, which allows anyone to be able to build their statusline as they wish to. It provides example for every option to allow anyone to easily understand the purpose of any option
+Documentation is another aspect where I found most statusline plugins to be very
+lacking. Feline is extremely easy to configure and well-documented, which allows
+anyone to be able to build their statusline as they wish to. It provides example
+for every option to allow anyone to easily understand the purpose of any option
 
-Lastly, anyone is welcome to contribute to Feline, either by making an Issue or through a Pull Request (see [CONTRIBUTING](CONTRIBUTING.md) for further information). Any kind of contribution starting from fixing a minor typo to adding a massive new feature is welcome.
+Lastly, anyone is welcome to contribute to Feline, either by making an Issue or
+through a Pull Request (see [CONTRIBUTING](CONTRIBUTING.md) for further
+information). Any kind of contribution starting from fixing a minor typo to
+adding a massive new feature is welcome.
 
 And this plugin is named after cats, you won't get that anywhere else.
 
 ## LICENSE
 
-Feline is licensed under GNU GPLv3. For more info, see: [LICENSE.md](LICENSE.md).
+Feline is licensed under GNU GPLv3. For more info, see:
+[LICENSE.md](LICENSE.md).
 
 ## Miscellaneous
 
 ### Naming
 
-The name of this plugin is a silly pun based on the convention of the names of statusline plugins ending with 'line', while also being named after cats. And in a way this statusline is supposed to be as quick as a cat's instincts, so I guess the name fits.
+The name of this plugin is a silly pun based on the convention of the names of
+statusline plugins ending with 'line', while also being named after cats. And in
+a way this statusline is supposed to be as quick as a cat's instincts, so I
+guess the name fits.
