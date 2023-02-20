@@ -119,8 +119,8 @@ them was removed due to the link no longer being valid.**
 **[Config by Dharmx](https://gist.github.com/dharmx/47139967b0c4303572e3742af725300c)**
 ![image](https://user-images.githubusercontent.com/80379926/205459030-1ef38f4f-b364-43ea-876e-db98549c38cd.png)
 
-You can add your own configuration to this list. If you're interested, simply
-make a [Pull Request](CONTRIBUTING.md) and I'll add it.
+To share your configuration, start a discussion following this
+[example](https://github.com/freddiehaddad/feline.nvim/discussions/2).
 
 ## Installation
 
