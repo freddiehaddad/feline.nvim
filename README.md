@@ -16,7 +16,7 @@ those who don't want to configure things and just want a good out of the box
 experience.
 
 The author of `feline.nvim` has stepped down from maintaining this project. This
-fork aims to server as the new home for this plugin per
+fork aims to serve as the new home for this plugin per
 [reddit discussion](https://www.reddit.com/r/neovim/comments/116av04/comment/j99m5hj/?context=3).
 
 ## Features
@@ -51,8 +51,8 @@ fork aims to server as the new home for this plugin per
     icon support
   - [A patched font](https://github.com/ryanoasis/nerd-fonts/) - For icon
     support
-  - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim/) - For
-    [git providers](#git)
+  - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim/) - For git
+    providers
 
 ## Screenshots
 
