@@ -124,6 +124,12 @@ To share your configuration, start a discussion following this
 
 ## Installation
 
+- [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+{ 'freddiehaddad/feline.nvim' }
+```
+
 - [packer.nvim](https://github.com/wbthomason/packer.nvim/):
 
 ```lua
