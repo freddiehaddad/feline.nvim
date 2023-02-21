@@ -127,13 +127,13 @@ To share your configuration, start a discussion following this
 - [packer.nvim](https://github.com/wbthomason/packer.nvim/):
 
 ```lua
-use 'feline-nvim/feline.nvim'
+use 'freddiehaddad/feline.nvim'
 ```
 
 - [vim-plug](https://github.com/junegunn/vim-plug/):
 
 ```vim
-Plug 'feline-nvim/feline.nvim'
+Plug 'freddiehaddad/feline.nvim'
 ```
 
 ### Using a compatibility branch
