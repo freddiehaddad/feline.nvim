@@ -14,7 +14,7 @@ jobs:
         with:
           vimdoc: feline
           pandoc: USAGE.md
-          version: "Neovim >= 0.8.0"
+          version: "Neovim >= 0.7.0"
           treesitter: true
           dedupsubheadings: false
       - name: Push changes
@@ -35,7 +35,7 @@ jobs:
         id: release
         with:
           release-type: simple
-          package-name: LazyVim
+          package-name: Feline
       - uses: actions/checkout@v2
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
