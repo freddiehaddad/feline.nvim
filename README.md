@@ -142,36 +142,6 @@ use 'freddiehaddad/feline.nvim'
 Plug 'freddiehaddad/feline.nvim'
 ```
 
-### Using a compatibility branch
-
-Feline has compatibility branches which are versions that have compatibility
-with an older Neovim version. The compatibility branches are old and usually
-don't contain the latest changes to Feline, though the changes may occasionally
-be backported. However, these branches are useful if you don't have the
-currently required minimum version of Neovim to use Feline. The compatibility
-branches are named like `{neovim-version}-compat` where `{neovim-version}` is
-the version of Neovim it maintains compatibility with. For example, the
-`0.5-compat` branch is compatible with Neovim 0.5. Note that there may not be a
-compatibility branch for all versions and there may be gaps in the compatibility
-versions. Here's how you can install a compatibility branch instead of the
-master branch:
-
-- [packer.nvim](https://github.com/wbthomason/packer.nvim/):
-
-```lua
-use { 'feline-nvim/feline.nvim', branch = '0.5-compat' }
-```
-
-- [vim-plug](https://github.com/junegunn/vim-plug/):
-
-```vim
-Plug 'feline-nvim/feline.nvim', { 'branch': '0.5-compat' }
-```
-
-Compatibility branches for versions that are 4 or more (minor) versions older
-than the latest Neovim version may be removed at any time, so use them at your
-own risk.
-
 ## Getting started
 
 ### Using the default configuration
@@ -215,7 +185,7 @@ install Feline, that should fix the issue.
 
 If you have an issue that you can't find the fix to in the documentation or want
 to request a feature you think is absolutely necessary, feel free to make a new
-[Issue](https://github.com/feline-nvim/feline.nvim/issues) and I will try my
+[Issue](https://github.com/freddiehaddad/feline.nvim/issues) and I will try my
 best to look into it. If you want to contribute to Feline, you can make a Pull
 Request. For more details, please see: [CONTRIBUTING](CONTRIBUTING.md)
 
