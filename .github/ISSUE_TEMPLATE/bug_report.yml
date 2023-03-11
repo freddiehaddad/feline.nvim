@@ -59,13 +59,13 @@ body:
       value: |
         -- plugin manager
 	require("lazy").setup({
-	  {
-	    "freddiehaddad/feline.nvim",
-	    config = function()
-	      -- your configuration
-	    end,
-	  }
-	}, { checker = { enabled = true, notify = false } })
+          {
+            "freddiehaddad/feline.nvim",
+            config = function()
+              -- your configuration
+            end,
+          }
+        }, { checker = { enabled = true, notify = false } })
       render: Lua
     validations:
       required: false
