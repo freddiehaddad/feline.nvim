@@ -194,7 +194,7 @@ Here are a few examples of setting the provider to a function:
 >lua
     -- Here's an example of a basic provider with no arguments
     provider = function()
-        return tostring(vim.api.nvim_list_wins())
+        return tostring(#vim.api.nvim_list_wins())
     end
     
     -- Providers can take the component itself as an argument to access the component values using the
@@ -247,7 +247,7 @@ then the provider will be updated if value is `true`. For example:
         name = 'my_provider',
         -- Only update provider if there are less than 4 windows in the current tabpage
         update = function()
-            return vim.api.nvim_tabpage_list_wins(0) < 4
+            return #vim.api.nvim_tabpage_list_wins(0) < 4
         end
     }
 <
@@ -441,7 +441,7 @@ the provider string is empty, you need to set `always_visible` to `true`.
     
     -- Making icon always visible
     icon = {
-        str = '',
+        str = '',
         hl = {
             fg = require('feline.providers.vi_mode').get_mode_color(),
             bg = 'black',
@@ -467,7 +467,7 @@ based on the given values. The hl table can have four values: `fg`, `bg`,
 
 The `fg` and `bg` values are strings that represent the RGB hex or
 |feline-name| of the foreground and background color of the highlight,
-respectively. (eg: `'FFFFFF'`, `'white'`). If `fg` or `bg` is not provided, it
+respectively. (eg: `'#FFFFFF'`, `'white'`). If `fg` or `bg` is not provided, it
 uses the default foreground or background color provided in the `setup()`
 function, respectively.
 
@@ -580,7 +580,7 @@ For example:
     -- Setting sep to a function
     right_sep = function()
         local values = { 'right_rounded', 'right_filled', 'right' }
-        return values[math.random(values)]
+        return values[math.random(#values)]
     end
     
     -- Setting sep to a list separator elements
@@ -920,10 +920,11 @@ The Vi-mode provider also provides a helper function
 highlight name for the current mode, which you can then use for the
 provider’s `hl.name` to give its highlight groups meaningful names.
 
-The Vi-mode provider can take some provider options through the provider `opts`
+The Vi-mode provider can take some provider options through the provider
+`opts`:
 
 
-- `show_mode_name`(boolean): If true, show the mode name regardless of whether
+- `show_mode_name` (boolean): If true, show the mode name regardless of whether
     the icon is set or not. Useful if you want to see both the indicator icon and
     the mode name. Default: `true` if component’s icon is set to `''`, `false`
     otherwise.
@@ -978,32 +979,32 @@ for it to work.
 FILE INFO ~
 
 The `file_info` provider has some special provider options that can be passed
-through the provider `opts`
+through the provider `opts`:
 
 
-- `colored_icon`(boolean): Determines whether file icon should use color
+- `colored_icon` (boolean): Determines whether file icon should use color
     inherited from `nvim-web-devicons`. Default: `true`
 - `file_modified_icon` (string): The icon that is shown when a file is modified.
-    Default:`''`
+    Default:`'●'`
 - `file_readonly_icon` (string): The icon that is shown when a file is read-only.
-    Default:`''`
+    Default:`'🔒'`
 - `path_sep` (string): The separator character in the file path. Default: `/` or
     `\` depending on OS
 - `type` (string): Determines which parts of the filename are shown. Its value
     can be one of:
-    - `'full-path'`Full path of the file (eg:
+    - `'full-path'`: Full path of the file (eg:
         `'/home/user/.config/nvim/init.lua'`)
-    - `'short-path'`Shortened path of the file (eg: `'/h/u/.c/n/init.lua'`)
-    - `'base-only'`Show only base filename and extension (eg: `'init.lua'`)
-    - `'relative'`File path relative to the current directory.
-    - `'relative-short'`Combination of `'relative'` and `'short-path'`.
-    - `'unique'`Unique substring of the full path. For example: If you have
+    - `'short-path'`: Shortened path of the file (eg: `'/h/u/.c/n/init.lua'`)
+    - `'base-only'`: Show only base filename and extension (eg: `'init.lua'`)
+    - `'relative'`: File path relative to the current directory.
+    - `'relative-short'`: Combination of `'relative'` and `'short-path'`.
+    - `'unique'`: Unique substring of the full path. For example: If you have
         three buffers with the paths `'/home/user/file.lua'`,
         `'/home/user/dir1/file.lua'` and `'/home/user/dir2/file.lua'`, Feline will
         show the names `'user/file.lua'`, `'dir1/file.lua'` and `'dir2/file.lua'`
         for them, respectively. If there aren’t any files that share the same
         name, it behaves the same as `'base-only'`.
-    - `'unique-short'`Combination of `'unique'` and `'short-path'`.
+    - `'unique-short'`: Combination of `'unique'` and `'short-path'`.
     Default: `'base-only'`
 
 
@@ -1069,9 +1070,9 @@ theme:
 >lua
     -- Theme table
     local my_theme = {
-        red = 'FF0000',
-        green = '00FF00',
-        blue = '0000FF'
+        red = '#FF0000',
+        green = '#00FF00',
+        blue = '#0000FF'
     }
     
     require('feline').use_theme(my_theme)
@@ -1090,9 +1091,9 @@ this:
 >lua
     -- Theme table
     local my_theme = {
-        red = 'FF0000',
-        green = '00FF00',
-        blue = '0000FF'
+        red = '#FF0000',
+        green = '#00FF00',
+        blue = '#0000FF'
     }
     
     require('feline').add_theme('my_theme_name', my_theme)
@@ -1122,20 +1123,20 @@ theme if a color name is not found in the current theme. Here are the colors
 available in the default theme and their values:
 
   Name        Value
-  ----------- ----------
-  fg          'D0D0D0'
-  bg          '1F1F23'
-  black       '1B1B1B'
-  skyblue     '50B0F0'
-  cyan        '009090'
-  green       '60A040'
-  oceanblue   '0066cc'
-  magenta     'C26BDB'
-  orange      'FF9000'
-  red         'D10000'
-  violet      '9E93E8'
-  white       'FFFFFF'
-  yellow      'E1E120'
+  ----------- -----------
+  fg          '#D0D0D0'
+  bg          '#1F1F23'
+  black       '#1B1B1B'
+  skyblue     '#50B0F0'
+  cyan        '#009090'
+  green       '#60A040'
+  oceanblue   '#0066cc'
+  magenta     '#C26BDB'
+  orange      '#FF9000'
+  red         '#D10000'
+  violet      '#9E93E8'
+  white       '#FFFFFF'
+  yellow      '#E1E120'
 
 SEPARATOR PRESETS                             *feline-usage-separator-presets*
 
@@ -1156,26 +1157,26 @@ DEFAULT SEPARATORS ~
 
   Name                 Value
   -------------------- -------
-  vertical_bar         ''
-  vertical_bar_thin    ''
-  left                 ''
-  right                ''
-  block                ''
-  left_filled          ''
-  right_filled         ''
-  slant_left           ''
-  slant_left_thin      ''
-  slant_right          ''
-  slant_right_thin     ''
-  slant_left_2         ''
-  slant_left_2_thin    ''
-  slant_right_2        ''
-  slant_right_2_thin   ''
-  left_rounded         ''
-  left_rounded_thin    ''
-  right_rounded        ''
-  right_rounded_thin   ''
-  circle               ''
+  vertical_bar         '┃'
+  vertical_bar_thin    '│'
+  left                 ''
+  right                ''
+  block                '█'
+  left_filled          ''
+  right_filled         ''
+  slant_left           ''
+  slant_left_thin      ''
+  slant_right          ''
+  slant_right_thin     ''
+  slant_left_2         ''
+  slant_left_2_thin    ''
+  slant_right_2        ''
+  slant_right_2_thin   ''
+  left_rounded         ''
+  left_rounded_thin    ''
+  right_rounded        ''
+  right_rounded_thin   ''
+  circle               '●'
 
 TIPS AND TRICKS                                 *feline-usage-tips-and-tricks*
 
