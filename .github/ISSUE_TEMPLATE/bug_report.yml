@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Before** reporting an issue, make sure to read the [documentation](https://github.com/folke/LazyVim) and search [existing issues](https://github.com/folke/LazyVim/issues). Usage questions such as ***"How do I...?"*** belong in [Discussions](https://github.com/folke/LazyVim/discussions) and will be closed.
+        **Before** reporting an issue, make sure to read the [documentation](https://github.com/freddiehaddad/feline.nvim) and search [existing issues](https://github.com/freddiehaddad/feline.nvim/issues). Usage questions such as ***"How do I...?"*** belong in [Discussions](https://github.com/freddiehaddad/feline.nvim/discussions) and will be closed.
   - type: checkboxes
     attributes:
       label: Did you check docs and existing issues?
@@ -33,17 +33,15 @@ body:
   - type: textarea
     attributes:
       label: Describe the bug
-      description: A clear and concise description of what the bug is. Please include any related errors you see in Neovim.
+      description: A clear and concise description of what the bug is. Please include
+        any related errors you see in Neovim.
     validations:
       required: true
   - type: textarea
     attributes:
       label: Steps To Reproduce
       description: Steps to reproduce the behavior.
-      placeholder: |
-        1.
-        2. 
-        3.
+      placeholder: "1.\n2. \n3.\n"
     validations:
       required: true
   - type: textarea
@@ -55,17 +53,17 @@ body:
   - type: textarea
     attributes:
       label: Repro
-      description: Minimal `init.lua` to reproduce this issue. Save as `repro.lua` and run with `nvim -u repro.lua`
+      description: Minimal `init.lua` to reproduce this issue. Save as `repro.lua`
+        and run with `nvim -u repro.lua`
       value: |
-        -- plugin manager
-	require("lazy").setup({
+        require("lazy").setup({
           {
             "freddiehaddad/feline.nvim",
             config = function()
               -- your configuration
             end,
           }
-        }, { checker = { enabled = true, notify = false } })
+        })
       render: Lua
     validations:
       required: false
