@@ -4,14 +4,14 @@
 Table of Contents                                   *feline-table-of-contents*
 
 1. Usage                                                        |feline-usage|
-  - Components                                       |feline-usage-components|
-  - Setup function                               |feline-usage-setup-function|
-  - Winbar                                               |feline-usage-winbar|
-  - Utility functions                         |feline-usage-utility-functions|
-  - Default providers                         |feline-usage-default-providers|
-  - Themes                                               |feline-usage-themes|
-  - Separator presets                         |feline-usage-separator-presets|
-  - Tips and tricks                             |feline-usage-tips-and-tricks|
+  - Components                                             |feline-components|
+  - Setup function                                     |feline-setup-function|
+  - Winbar                                                     |feline-winbar|
+  - Utility functions                               |feline-utility-functions|
+  - Default providers                               |feline-default-providers|
+  - Themes                                                     |feline-themes|
+  - Separator presets                               |feline-separator-presets|
+  - Tips and tricks                                   |feline-tips-and-tricks|
 
 ==============================================================================
 1. Usage                                                        *feline-usage*
@@ -22,7 +22,7 @@ that this is very easy once you understand it. But before you can customize
 Feline, you have to understand how Feline works.
 
 
-COMPONENTS                                           *feline-usage-components*
+COMPONENTS                                                 *feline-components*
 
 Feline has a statusline generator that takes a `components` value, which is a
 Lua table that needs to contain the statusline components. Inside the
@@ -677,7 +677,7 @@ Component example ~
 anything to it]
 
 
-SETUP FUNCTION                                   *feline-usage-setup-function*
+SETUP FUNCTION                                         *feline-setup-function*
 
 Now that you know about the components table and how Feline components work,
 you can learn about Feline’s `setup()` function. The `setup()` function
@@ -803,7 +803,7 @@ listed below:
     `{'SessionLoadPost', 'ColorScheme'}`
 
 
-WINBAR                                                   *feline-usage-winbar*
+WINBAR                                                         *feline-winbar*
 
 Feline has support for winbar, a Neovim 0.8 feature that allows you to have a
 bar at the top of each window. You can setup the winbar components using the
@@ -816,7 +816,7 @@ which means the winbar is never forced to use the inactive components table by
 default.
 
 
-UTILITY FUNCTIONS                             *feline-usage-utility-functions*
+UTILITY FUNCTIONS                                   *feline-utility-functions*
 
 Feline provides a few utility functions that allow you to customize or modify
 Feline on the fly. These are discussed below.
@@ -836,7 +836,7 @@ Feline will automatically regenerate those highlights when it needs them, so
 you don’t have to worry about setting the highlights yourself.
 
 
-DEFAULT PROVIDERS                             *feline-usage-default-providers*
+DEFAULT PROVIDERS                                   *feline-default-providers*
 
 Feline by default has some built-in providers to make your life easy. They are:
 
@@ -1047,7 +1047,7 @@ argument to only check for diagnostics of that severity. The value of
 `:help vim.diagnostic.severity` in Neovim.
 
 
-THEMES                                                   *feline-usage-themes*
+THEMES                                                         *feline-themes*
 
 Feline supports different themes to customize your statusline colors on the
 fly. A theme is a Lua table associating color names with their RGB hex codes.
@@ -1138,7 +1138,7 @@ available in the default theme and their values:
   white       '#FFFFFF'
   yellow      '#E1E120'
 
-SEPARATOR PRESETS                             *feline-usage-separator-presets*
+SEPARATOR PRESETS                                   *feline-separator-presets*
 
 Instead of having to remember unicode values for separator glyphs or having to
 constantly copy-paste them, you can use Feline’s separator presets instead.
@@ -1178,7 +1178,7 @@ DEFAULT SEPARATORS ~
   right_rounded_thin   ''
   circle               '●'
 
-TIPS AND TRICKS                                 *feline-usage-tips-and-tricks*
+TIPS AND TRICKS                                       *feline-tips-and-tricks*
 
 
 GET CURRENT WINDOW OR BUFFER ~
