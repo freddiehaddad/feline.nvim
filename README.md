@@ -3,7 +3,7 @@
 A minimal, stylish and customizable statusline / winbar for Neovim written in
 Lua
 
-Requires Neovim >= 0.7 (or >= 0.5 with the `0.5-compat` branch)
+Requires Neovim >= 0.7
 
 ## About
 
@@ -42,7 +42,7 @@ fork aims to serve as the new home for this plugin per
 ## Requirements
 
 - Necessary
-  - Neovim v0.7 or greater (v0.5 or greater if using the `0.5-compat` branch)
+  - Neovim v0.7 or greater
   - You must have 24-bit RGB color enabled in Neovim (do `:help 'termguicolors'`
     in Neovim for more info)
 - Optional
