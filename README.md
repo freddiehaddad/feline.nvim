@@ -69,7 +69,7 @@ them was removed due to the link no longer being valid.**
 **[Config by freddiehaddad:](https://github.com/freddiehaddad/feline.nvim/discussions/2)**
 ![image](https://user-images.githubusercontent.com/6127369/220177261-668841ca-3128-436f-8879-62f145261399.png)
 
-**[Config by crivotz:](https://github.com/crivotz/nv-ide/blob/master/lua/plugins/feline.lua)**
+**[Config by crivotz:](https://github.com/crivotz/nv-ide/blob/master/lua/config/plugins/feline.lua)**
 ![image](https://user-images.githubusercontent.com/3275600/114841377-0ce89d00-9dd8-11eb-82b4-b3ee332771c2.png)
 
 **[Config by 6cdh:](https://github.com/6cdh/dotfiles/blob/62959d27344dade28d6dd638252cd82accb309ab/nvim/.config/nvim/lua/statusline.lua)**
@@ -98,7 +98,7 @@ them was removed due to the link no longer being valid.**
 **[Config by pianocomposer321:](https://gist.github.com/pianocomposer321/6151c458132a97590d21415db67361a6)**
 ![image](https://user-images.githubusercontent.com/54072354/117869424-65d51500-b260-11eb-898c-0a0b987a6275.png)
 
-**[Config by iBhagwan:](https://github.com/ibhagwan/nvim-lua/blob/main/lua/plugins/feline.lua)**
+**Config by iBhagwan:**
 ![image](https://user-images.githubusercontent.com/59988195/133922136-3d037c37-7a3f-4e1b-b42e-c50b22fedfdb.png)
 
 **[Config by EdenEast](https://github.com/EdenEast/nyx/blob/8a9819e/config/.config/nvim/lua/eden/modules/ui/feline/init.lua)**
