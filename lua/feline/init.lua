@@ -28,6 +28,11 @@ function M.reset_highlights()
     end
 end
 
+-- Add a Feline color theme
+function M.add_theme(name, value)
+    themes[name] = value
+end
+
 -- Use a theme (can be either a string containing theme name or a table containing theme colors)
 function M.use_theme(name_or_tbl)
     local theme_colors
