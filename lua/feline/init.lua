@@ -2,10 +2,7 @@ local api = vim.api
 
 -- Check if Neovim version is 0.7 or greater
 if vim.fn.has('nvim-0.7') ~= 1 then
-    api.nvim_err_writeln(
-        'Feline is only available for Neovim versions 0.7 and above. For Neovim 0.5'
-            .. 'compatibility, use the 0.5-compat branch'
-    )
+    api.nvim_err_writeln('Feline is only available for Neovim versions 0.7 and above.')
     return
 end
 
