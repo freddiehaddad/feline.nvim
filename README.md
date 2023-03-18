@@ -163,13 +163,12 @@ require('feline').winbar.setup()
 
 ### Configuring Feline to fit your needs
 
-If the default configuration doesn't fit your needs and you want to build your
-own statusline configuration, it's highly recommended to configure Feline to
-suit your needs. The only prerequisite is knowing the basics of Lua. Feline
-provides a ton of configuration options which can let you build your statusline
-exactly how you want it as long. To see how to do that, take a look at
-[USAGE](USAGE.md) or use `:help feline.txt` inside Neovim to read the USAGE
-documentation.
+If the default configuration doesn't suit your needs, Feline provides plenty of
+customization options enabling you to build your statusline exactly how you
+want. The only prerequisite is knowing the basics of Lua. Refer to the
+[USAGE](USAGE.md) documentation or use `:help feline.txt` inside Neovim to read
+the USAGE docs. Additionally, you may find it helpful to look at the community
+configurations.
 
 ## Help
 
