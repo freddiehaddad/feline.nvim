@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.0.0...v1.0.1) (2023-03-18)
+
+
+### Bug Fixes
+
+* **log:** remove 0.5-combat reference from requirement log message ([#11](https://github.com/freddiehaddad/feline.nvim/issues/11)) ([6efdcd9](https://github.com/freddiehaddad/feline.nvim/commit/6efdcd9403910a484800af06142b2941f0aeffc8))
+* **theme:** revert the removal of add_theme ([#9](https://github.com/freddiehaddad/feline.nvim/issues/9)) ([f28c2ec](https://github.com/freddiehaddad/feline.nvim/commit/f28c2ecb3117541799ccef01e25bdf72242f5243)), closes [#8](https://github.com/freddiehaddad/feline.nvim/issues/8)
+
 ## 1.0.0 (2023-03-11)
 
 
