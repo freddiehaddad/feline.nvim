@@ -1,4 +1,4 @@
-*feline.txt*           For Neovim >= 0.7.0          Last change: 2023 March 22
+*feline.txt*           For Neovim >= 0.7.0          Last change: 2023 March 29
 
 ==============================================================================
 Table of Contents                                   *feline-table-of-contents*
