@@ -778,6 +778,19 @@ winbar. Additionally, the default value of `force_inactive` for the winbar is
 `{}`, which means the winbar is never forced to use the inactive components
 table by default.
 
+## Statuscolumn
+
+Feline has support for statuscolumn, an experimental Neovim 0.9 feature that
+allows you to customize the statuscolumn in similar fashion to the statusline
+and winbar. Statuscolumn can be enabled and components configured using the
+`require('feline').statuscolumn.setup()` function. It works pretty much the same
+way as the [setup function](#setup-function) for the statusline. However, it
+only accepts the `components`, `conditional_components`, `force_inactive` and
+`disable` values, the other values are shared across all components.
+Additionally, the default value of `force_inactive` for the statuscolumn is
+`{}`, which means the statuscolumn is never forced to use the inactive
+components table by default.
+
 ## Utility functions
 
 Feline provides a few utility functions that allow you to customize or modify
@@ -822,6 +835,18 @@ Feline by default has some built-in providers to make your life easy. They are:
 | [`diagnostic_warnings`](#diagnostics) | Diagnostics warnings count                     |
 | [`diagnostic_hints`](#diagnostics)    | Diagnostics hints count                        |
 | [`diagnostic_info`](#diagnostics)     | Diagnostics info count                         |
+
+Statuscolumn providers:
+
+| Name          | Description                                    |
+| ------------- | ---------------------------------------------- |
+| `fold_column` | Fold column for currently drawn line           |
+| `line_number` | (relative) line number of currently drawn line |
+| `sign_column` | Sign column for currently drawn line           |
+
+The statuscolumn providers are minimal in their defaults and are meant to offer
+guidance on how one might begin t configure these components. See the
+`statuscolumn.lua` files for details.
 
 ### Vi-mode
 
