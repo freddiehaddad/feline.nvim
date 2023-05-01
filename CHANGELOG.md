@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.0.1...v1.1.0) (2023-05-01)
+
+
+### Features
+
+* **statuscolumn:** add statuscolumn support ([#17](https://github.com/freddiehaddad/feline.nvim/issues/17)) ([#18](https://github.com/freddiehaddad/feline.nvim/issues/18)) ([#18](https://github.com/freddiehaddad/feline.nvim/issues/18)) ([25b258f](https://github.com/freddiehaddad/feline.nvim/commit/25b258f52246bd544f3ca09f010ead6d92c9025d))
+
 ## [1.0.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.0.0...v1.0.1) (2023-03-18)
 
 
