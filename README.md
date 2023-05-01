@@ -30,16 +30,16 @@ Requires Neovim >= 0.7
 
 ## About
 
-Feline is a Lua statusline plugin that prioritizes speed, customizability and
-minimalism. It's fast and never gets in your way. Feline only provides you with
-the necessary tools that you need to customize the statusline to your liking and
-avoids feature-bloat. It's also extremely customizable and allows you to
-configure it in any way you wish to. Feline also has reasonable defaults for
-those who don't want to configure things and just want a good out of the box
-experience.
+Feline is a Lua statusline, statuscolumn and winbar plugin that prioritizes
+speed, customizability and minimalism. It's fast and never gets in your way.
+Feline only provides you with the necessary tools that you need to configure
+these UI elements to your liking and avoids feature-bloat. It's also extremely
+customizable and allows you to configure it in any way you wish to. Feline also
+has reasonable defaults for those who don't want to configure things and just
+want a good out of the box experience.
 
 The author of `feline.nvim` has stepped down from maintaining this project. This
-fork aims to serve as the new home for this plugin per
+repository is the plugins new home as per
 [reddit discussion](https://www.reddit.com/r/neovim/comments/116av04/comment/j99m5hj/?context=3).
 
 ## Features
@@ -61,6 +61,7 @@ fork aims to serve as the new home for this plugin per
 - Minimalistic, only provides the bare minimum and allows the user to build
   their own components very easily.
 - Winbar support.
+- Statuscolumn support.
 
 ## Requirements
 
@@ -70,6 +71,7 @@ fork aims to serve as the new home for this plugin per
     in Neovim for more info)
 - Optional
   - Neovim v0.8 or greater - For winbar support
+  - Neovim v0.9 or greater - For statuscolumn support
   - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons/) - For
     icon support
   - [A patched font](https://github.com/ryanoasis/nerd-fonts/) - For icon
@@ -187,8 +189,8 @@ require('feline').winbar.setup()
 ### Configuring Feline to fit your needs
 
 If the default configuration doesn't suit your needs, Feline provides plenty of
-customization options enabling you to build your statusline exactly how you
-want. The only prerequisite is knowing the basics of Lua. Refer to the
+customization options enabling you to configure everything exactly how you want.
+The only prerequisite is knowing the basics of Lua. Refer to the
 [USAGE](USAGE.md) documentation or use `:help feline.txt` inside Neovim to read
 the USAGE docs. Additionally, you may find it helpful to look at the community
 configurations.
@@ -199,9 +201,11 @@ configurations.
 
 #### Feline crashes or disappears for seemingly no reason
 
-This can be caused if you forget to remove your other statusline plugins after
-installing Feline. Make sure all other statusline plugins are removed before you
-install Feline, that should fix the issue.
+This can be caused by conflicting plugins modifying the winbar, statuscolumn or
+statusbar along with Feline. The statusline is a core piece of functionality of
+Feline and can't easily be disabled. However, the optional components can be. If
+another plugin is modifying any of these components, then do not enable them in
+Feline.
 
 ### Reporting issues or feature requests
 

@@ -614,7 +614,7 @@ function Generator:generate(is_active, maxwidth)
     end
 
     -- If statusline width is greater than maxwidth, begin the truncation process
-    if statusline_width > maxwidth then
+    if maxwidth and statusline_width > maxwidth then
         -- First, sort the component indices in ascending order of the priority of the components
         -- that the indices refer to
         table.sort(component_indices, function(first, second)
@@ -669,7 +669,7 @@ function Generator:generate(is_active, maxwidth)
 
     -- If statusline still doesn't fit within window, remove components with truncate_hide set to
     -- true until it does
-    if statusline_width > maxwidth then
+    if maxwidth and statusline_width > maxwidth then
         for _, indices in ipairs(component_indices) do
             local section, number = indices[1], indices[2]
             local component = sections[section][number]

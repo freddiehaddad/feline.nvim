@@ -10,10 +10,11 @@ local utils = require('feline.utils')
 local defaults = require('feline.defaults')
 local themes = utils.lazy_require('feline.themes')
 local Generator = utils.lazy_require('feline.generator')
-local gen, winbar_gen
+local gen, winbar_gen, statuscolumn_gen
 
 local M = {}
 M.winbar = {}
+M.statuscolumn = {}
 
 -- Clear all highlights created by Feline and remove them from cache
 function M.reset_highlights()
@@ -129,12 +130,15 @@ local function setup_global_config(config)
     end
 end
 
-local function setup_common(config, is_winbar)
+local function setup_common(config, is_winbar, is_statuscolumn)
     local module
 
     if is_winbar then
         M.winbar_module = {}
         module = M.winbar_module
+    elseif is_statuscolumn then
+        M.statuscolumn_module = {}
+        module = M.statuscolumn_module
     else
         M.statusline_module = {}
         module = M.statusline_module
@@ -154,6 +158,12 @@ local function setup_common(config, is_winbar)
                 module.components = require('feline.default_components').winbar.icons
             else
                 module.components = require('feline.default_components').winbar.noicons
+            end
+        elseif is_statuscolumn then
+            if use_icons then
+                module.components = require('feline.default_components').statuscolumn.icons
+            else
+                module.components = require('feline.default_components').statuscolumn.noicons
             end
         else
             if use_icons then
@@ -181,7 +191,7 @@ function M.setup(config)
     config = utils.parse_config(config, defaults.statusline)
 
     setup_global_config(config)
-    setup_common(config, false)
+    setup_common(config, false, false)
 
     -- Create the generator if it doesn't exist, clear the generator if it does
     if not gen then
@@ -197,7 +207,7 @@ end
 
 function M.winbar.setup(config)
     config = utils.parse_config(config, defaults.winbar)
-    setup_common(config, true)
+    setup_common(config, true, false)
 
     -- Create the generator if it doesn't exist, clear the generator if it does
     if not winbar_gen then
@@ -207,6 +217,20 @@ function M.winbar.setup(config)
     end
 
     vim.o.winbar = "%{%v:lua.require'feline'.generate_winbar()%}"
+end
+
+function M.statuscolumn.setup(config)
+    config = utils.parse_config(config, defaults.statuscolumn)
+    setup_common(config, false, true)
+
+    -- Create the generator if it doesn't exist
+    if not statuscolumn_gen then
+        statuscolumn_gen = Generator.new('statuscolumn', M.statuscolumn_module)
+    else
+        statuscolumn_gen:clear_state()
+    end
+
+    vim.o.statuscolumn = "%{%v:lua.require'feline'.generate_statuscolumn()%}"
 end
 
 function M.generate_statusline()
@@ -229,6 +253,12 @@ function M.generate_winbar()
     local maxwidth = api.nvim_win_get_width(0)
 
     return winbar_gen:generate(is_active, maxwidth)
+end
+
+function M.generate_statuscolumn()
+    local is_active = api.nvim_get_current_win() == tonumber(vim.g.actual_curwin)
+
+    return statuscolumn_gen:generate(is_active, nil)
 end
 
 return M

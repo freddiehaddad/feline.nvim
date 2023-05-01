@@ -116,4 +116,20 @@ return {
             type = 'table',
         },
     },
+    statuscolumn = {
+        force_inactive = {
+            type = 'table',
+            default_value = {},
+        },
+        disable = {
+            type = 'table',
+            default_value = {},
+        },
+        components = {
+            type = 'table',
+        },
+        conditional_components = {
+            type = 'table',
+        },
+    },
 }

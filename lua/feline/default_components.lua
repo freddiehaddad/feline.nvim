@@ -21,6 +21,16 @@ local M = {
             inactive = {},
         },
     },
+    statuscolumn = {
+        icons = {
+            active = {},
+            inactive = {},
+        },
+        noicons = {
+            active = {},
+            inactive = {},
+        },
+    },
 }
 
 M.statusline.icons.active[1] = {
@@ -417,6 +427,60 @@ M.winbar.noicons.inactive[1] = {
             fg = 'white',
             bg = 'NONE',
             style = 'bold',
+        },
+        icon = '',
+    },
+}
+
+M.statuscolumn.icons.active[1] = {
+    {
+        provider = 'line_number',
+        hl = {
+            fg = 'white',
+            bg = 'NONE',
+        },
+        icon = '',
+    },
+    {
+        provider = 'sign_column',
+        hl = {
+            fg = 'blue',
+            bg = 'NONE',
+        },
+        icon = '',
+    },
+    {
+        provider = 'fold_column',
+        hl = {
+            fg = 'red',
+            bg = 'NONE',
+        },
+        icon = '',
+    },
+}
+
+M.statuscolumn.noicons.active[1] = {
+    {
+        provider = 'line_number',
+        hl = {
+            fg = 'white',
+            bg = 'NONE',
+        },
+        icon = '',
+    },
+    {
+        provider = 'sign_column',
+        hl = {
+            fg = 'blue',
+            bg = 'NONE',
+        },
+        icon = '',
+    },
+    {
+        provider = 'fold_column',
+        hl = {
+            fg = 'red',
+            bg = 'NONE',
         },
         icon = '',
     },
