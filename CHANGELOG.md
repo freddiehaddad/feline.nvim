@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.1.0...v1.1.1) (2023-05-06)
+
+
+### Bug Fixes
+
+* **git:** use updated nerd font icon for git changed indicator ([#20](https://github.com/freddiehaddad/feline.nvim/issues/20)) ([#21](https://github.com/freddiehaddad/feline.nvim/issues/21)) ([c7998fd](https://github.com/freddiehaddad/feline.nvim/commit/c7998fd078fe0eb1bdb9458a015427ee657a5199))
+
 ## [1.1.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.0.1...v1.1.0) (2023-05-01)
 
 
