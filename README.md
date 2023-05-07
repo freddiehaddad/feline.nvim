@@ -178,11 +178,18 @@ function in your configuration. Like this:
 require('feline').setup()
 ```
 
-And that's it! It's as easy as that. If you want to set up the `'winbar'`
-alongside the statusline, just add this line next to the previous line:
+If you want to set up the `'winbar'` alongside the statusline, just add this
+line next to the previous line:
 
 ```lua
 require('feline').winbar.setup()
+```
+
+If you want to set up the `'statuscolumn'` alongside the statusline, just add
+this line next to the previous line:
+
+```lua
+require('feline').statuscolumn.setup()
 ```
 
 ### Configuring Feline to fit your needs
