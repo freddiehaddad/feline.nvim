@@ -23,8 +23,7 @@
 </p>
 </div>
 
-A minimal, stylish and customizable statusline / winbar for Neovim written in
-Lua
+A minimal, stylish and customizable statusline, statuscolumn, and winbar for Neovim
 
 Requires Neovim >= 0.7
 
