@@ -101,6 +101,10 @@ return {
         },
     },
     winbar = {
+        theme = {
+            type = { 'table', 'string' },
+            default_value = 'default',
+        },
         force_inactive = {
             type = 'table',
             default_value = {},
@@ -117,6 +121,10 @@ return {
         },
     },
     statuscolumn = {
+        theme = {
+            type = { 'table', 'string' },
+            default_value = 'default',
+        },
         force_inactive = {
             type = 'table',
             default_value = {},

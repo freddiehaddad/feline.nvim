@@ -24,6 +24,9 @@ function M.reset_highlights()
     if winbar_gen then
         winbar_gen:reset_highlights()
     end
+    if statuscolumn_gen then
+        statuscolumn_gen:reset_highlights()
+    end
 end
 
 -- Add a Feline color theme
@@ -31,36 +34,31 @@ function M.add_theme(name, value)
     themes[name] = value
 end
 
+function M.winbar.use_theme(name_or_tbl)
+    if not winbar_gen then
+        return
+    end
+    utils._use_theme(themes, name_or_tbl, function(colors)
+        winbar_gen.config.theme = colors
+        M.reset_highlights()
+    end)
+end
+
+function M.statuscolumn.use_theme(name_or_tbl)
+    if not statuscolumn_gen then
+        return
+    end
+    utils._use_theme(themes, name_or_tbl, function(colors)
+        statuscolumn_gen.config.theme = colors
+        M.reset_highlights()
+    end)
+end
 -- Use a theme (can be either a string containing theme name or a table containing theme colors)
 function M.use_theme(name_or_tbl)
-    local theme_colors
-
-    if type(name_or_tbl) == 'string' then
-        if not themes[name_or_tbl] then
-            api.nvim_err_writeln(string.format("Theme '%s' not found!", name_or_tbl))
-            return
-        end
-
-        theme_colors = themes[name_or_tbl]
-    else
-        theme_colors = name_or_tbl
-    end
-
-    local colors = {}
-
-    -- To make sure Feline falls back to default theme for missing colors, first iterate through the
-    -- default colors and put their values in the colors table, and then iterate through the
-    -- theme colors to update the default values
-    for k, v in pairs(themes.default) do
-        colors[k] = v
-    end
-
-    for k, v in pairs(theme_colors) do
-        colors[k] = v
-    end
-
-    M.colors = colors
-    M.reset_highlights()
+    utils._use_theme(themes, name_or_tbl, function(colors)
+        M.colors = colors
+        M.reset_highlights()
+    end)
 end
 
 -- Check if component with `name` in the statusline of window `winid` is truncated or hidden
@@ -146,6 +144,7 @@ local function setup_common(config, is_winbar, is_statuscolumn)
 
     module.force_inactive = config.force_inactive
     module.disable = config.disable
+    module.theme = config.theme
 
     -- If components table is provided, use it, else use the default
     if config.components then
