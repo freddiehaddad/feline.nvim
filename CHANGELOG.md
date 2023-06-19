@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.1.1...v1.2.0) (2023-06-19)
+
+
+### Features
+
+* **theme:** add theme support for winbar and statuscolumn ([#27](https://github.com/freddiehaddad/feline.nvim/issues/27)) ([db6e3ce](https://github.com/freddiehaddad/feline.nvim/commit/db6e3ce054e309782ac14b333478a11ae9e38188))
+
 ## [1.1.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.1.0...v1.1.1) (2023-05-06)
 
 
