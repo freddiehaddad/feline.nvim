@@ -108,4 +108,34 @@ function M.parse_config(config_dict, defaults)
     return parsed_config
 end
 
+function M._use_theme(themes, name_or_tbl, set)
+    local theme_colors
+
+    if type(name_or_tbl) == 'string' then
+        if not themes[name_or_tbl] then
+            api.nvim_err_writeln(string.format("Theme '%s' not found!", name_or_tbl))
+            return
+        end
+
+        theme_colors = themes[name_or_tbl]
+    else
+        theme_colors = name_or_tbl
+    end
+
+    local colors = {}
+
+    -- To make sure Feline falls back to default theme for missing colors, first iterate through the
+    -- default colors and put their values in the colors table, and then iterate through the
+    -- theme colors to update the default values
+    for k, v in pairs(themes.default) do
+        colors[k] = v
+    end
+
+    for k, v in pairs(theme_colors) do
+        colors[k] = v
+    end
+
+    set(colors)
+end
+
 return M

@@ -116,11 +116,13 @@ local function is_disabled(gen)
 end
 
 -- Parse highlight table, inherit default/parent values if values are not given
-local function parse_hl(hl, parent_hl)
+local function parse_hl(hl, parent_hl, gen)
     parent_hl = parent_hl or {}
+    local gen_fg = gen and gen.name ~= 'statusline' and gen.config.theme and gen.config.theme.fg
+    local gen_bg = gen and gen.name ~= 'statusline' and gen.config.theme and gen.config.theme.bg
 
-    local fg = hl.fg or parent_hl.fg or feline.colors.fg
-    local bg = hl.bg or parent_hl.bg or feline.colors.bg
+    local fg = hl.fg or parent_hl.fg or gen_fg or feline.colors.fg
+    local bg = hl.bg or parent_hl.bg or gen_bg or feline.colors.bg
     local style = hl.style or parent_hl.style or 'NONE'
 
     if feline.colors[fg] then
@@ -429,7 +431,7 @@ local function parse_component(gen, component, use_short_provider, winid, sectio
     else
         -- If highlight is a table, parse the highlight so it can be passed to
         -- parse_sep_list and parse_icon
-        hl = parse_hl(hl)
+        hl = parse_hl(hl, nil, gen)
     end
 
     local provider, str, icon
