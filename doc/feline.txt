@@ -1,4 +1,4 @@
-*feline.txt*            For Neovim >= 0.7.0           Last change: 2023 May 07
+*feline.txt*           For Neovim >= 0.7.0           Last change: 2023 June 19
 
 ==============================================================================
 Table of Contents                                   *feline-table-of-contents*
@@ -686,7 +686,6 @@ initializes Feline with your provided configuration. The configuration can be
 passed to the function through a table. The available configuration options are
 listed below:
 
-
 - `components` - The |feline-components-table|.
 - `conditional_components` - An array-like table containing conditionally
     enabled components tables, each element of the table must be a components
@@ -726,7 +725,6 @@ listed below:
     }
 <
 
-
 - `custom_providers` - A table containing user-defined
     |feline-provider-functions|. For example:
 
@@ -737,7 +735,6 @@ listed below:
         end
     }
 <
-
 
 - `theme` - Either a string containing the color theme name or a table
     containing the colors. The theme’s `fg` and `bg` values also represent the
@@ -769,7 +766,6 @@ listed below:
     }
 <
 
-
 - `disable` - Similar to `force_inactive`, except the statusline is disabled
     completely. Configured the same way as `force_inactive`. Feline doesn’t
     disable the statusline on anything by default.
@@ -796,7 +792,6 @@ listed below:
   SHELL       Shell mode              'green'
   TERM        Terminal mode           'green'
   NONE        None                    'yellow'
-
 - `highlight_reset_triggers` - Feline automatically resets its cached highlights
     on certain autocommands to prevent the statusline colors from getting messed
     up. The value of `highlight_reset_triggers` can be set to a table containing a
@@ -810,7 +805,7 @@ Feline has support for winbar, a Neovim 0.8 feature that allows you to have a
 bar at the top of each window. You can setup the winbar components using the
 `require('feline').winbar.setup()` function. It works pretty much the same way
 as the |feline-setup-function| for the statusline. However, it only accepts the
-`components`, `conditional_components`, `force_inactive`, `disable` and `theme` values,
+`components`, `conditional_components`, `force_inactive` and `disable` values,
 the other values are shared between the statusline and the winbar.
 Additionally, the default value of `force_inactive` for the winbar is `{}`,
 which means the winbar is never forced to use the inactive components table by
@@ -824,8 +819,8 @@ allows you to customize the statuscolumn in similar fashion to the statusline
 and winbar. Statuscolumn can be enabled and components configured using the
 `require('feline').statuscolumn.setup()` function. It works pretty much the
 same way as the |feline-setup-function| for the statusline. However, it only
-accepts the `components`, `conditional_components`, `force_inactive`, `disable`
-and `theme` values, the other values are shared across all components.
+accepts the `components`, `conditional_components`, `force_inactive` and
+`disable` values, the other values are shared across all components.
 Additionally, the default value of `force_inactive` for the statuscolumn is
 `{}`, which means the statuscolumn is never forced to use the inactive
 components table by default.
@@ -949,7 +944,6 @@ provider’s `hl.name` to give its highlight groups meaningful names.
 The Vi-mode provider can take some provider options through the provider
 `opts`:
 
-
 - `show_mode_name` (boolean): If true, show the mode name regardless of whether
     the icon is set or not. Useful if you want to see both the indicator icon and
     the mode name. Default: `true` if component’s icon is set to `''`, `false`
@@ -1007,7 +1001,6 @@ FILE INFO ~
 The `file_info` provider has some special provider options that can be passed
 through the provider `opts`:
 
-
 - `colored_icon` (boolean): Determines whether file icon should use color
     inherited from `nvim-web-devicons`. Default: `true`
 - `file_modified_icon` (string): The icon that is shown when a file is modified.
@@ -1037,7 +1030,6 @@ through the provider `opts`:
 FILE TYPE ~
 
 The file type provider has the following options:
-
 
 - `filetype_icon` (boolean): Whether the file type icon is shown alongside the
     file type. Default: `false`
@@ -1081,15 +1073,9 @@ Feline only has one theme built-in, which is the default theme. However, it’s
 possible to add new themes to Feline. See the |feline-adding-new-themes|
 section for more info.
 
-To setup a theme you can set the value of `theme` in the |feline-setup-function|.
-This will set a global theme for the statusline, winbar and statuscolumn. You
-can also set a theme only for the winbar and statuscolumn in their respective
-setup-functions.
-
-You can also set the theme using `require('feline').use_theme`. This will set
-the global theme for the statusline, winbar and statuscolumn. You can also
-call `require('feline').winbar.use_theme` and `require('feline').statuscolumn.use_theme`
-to set the theme for the winbar and statuscolumn. `use_theme` can take
+There are mainly two ways of using a theme. The first is to set the value of
+`theme` in the |feline-setup-function| to the theme name or value. The second
+way is through the `require('feline').use_theme` function. `use_theme` can take
 the theme name as an argument. For example, this is how to use the default
 theme:
 
