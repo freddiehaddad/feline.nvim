@@ -43,6 +43,7 @@ return {
             default_value = {
                 ['NORMAL'] = 'green',
                 ['OP'] = 'green',
+                ['CONFIRM'] = 'orange',
                 ['INSERT'] = 'red',
                 ['VISUAL'] = 'skyblue',
                 ['LINES'] = 'skyblue',
