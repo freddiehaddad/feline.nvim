@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.2.0...v1.2.1) (2023-09-29)
+
+
+### Bug Fixes
+
+* **vi_mode:** add default color for confirm ([#33](https://github.com/freddiehaddad/feline.nvim/issues/33)) ([c06efb4](https://github.com/freddiehaddad/feline.nvim/commit/c06efb498d1cc083cde2de563f868308e93f9c49))
+
 ## [1.2.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.1.1...v1.2.0) (2023-06-19)
 
 
