@@ -1,4 +1,4 @@
-*feline.txt*           For Neovim >= 0.7.0           Last change: 2023 June 19
+*feline.txt*         For Neovim >= 0.7.0        Last change: 2023 September 29
 
 ==============================================================================
 Table of Contents                                   *feline-table-of-contents*
@@ -992,8 +992,8 @@ which may be useful if you want the scroll bar to have natural scrolling.
 
 SEARCH COUNT ~
 
-This provider requires `'hlsearch'` (see `:h 'hlsearch'` in Neovim) in order
-for it to work.
+This provider requires `'hlsearch'` (see |'hlsearch'| in Neovim) in order for
+it to work.
 
 
 FILE INFO ~
