@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/freddiehaddad/feline.nvim/compare/v1.2.1...v1.2.2) (2023-11-02)
+
+
+### Bug Fixes
+
+* **hl:** use nvim_get_hl due to deprecation ([#36](https://github.com/freddiehaddad/feline.nvim/issues/36)) ([ae40427](https://github.com/freddiehaddad/feline.nvim/commit/ae40427ab57b8163ee3171f605b77da2b7e9b670))
+
 ## [1.2.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.2.0...v1.2.1) (2023-09-29)
 
 
