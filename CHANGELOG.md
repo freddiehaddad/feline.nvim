@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/freddiehaddad/feline.nvim/compare/v1.2.2...v1.2.3) (2023-11-02)
+
+
+### Bug Fixes
+
+* require neovim 0.9+ due to deprecations ([#38](https://github.com/freddiehaddad/feline.nvim/issues/38)) ([dfb7df1](https://github.com/freddiehaddad/feline.nvim/commit/dfb7df1c11efd829999267211c999e421d07e935))
+
 ## [1.2.2](https://github.com/freddiehaddad/feline.nvim/compare/v1.2.1...v1.2.2) (2023-11-02)
 
 
