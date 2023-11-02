@@ -9,6 +9,21 @@
 A minimal, stylish and customizable statusline, statuscolumn, and winbar for
 Neovim
 
+Active Window
+![scrn-2023-11-02-05-54-47](https://github.com/freddiehaddad/feline.nvim/assets/6127369/e2dbda10-b9de-446f-9236-20896cf1fa98)
+
+Active Window with macro and search indicators
+![scrn-2023-11-02-05-58-19](https://github.com/freddiehaddad/feline.nvim/assets/6127369/4bc4edf5-3613-428a-891c-2a111b46df6b)
+
+Inactive Window
+![scrn-2023-11-02-05-55-10](https://github.com/freddiehaddad/feline.nvim/assets/6127369/48e0fb94-542a-47f3-b965-7a8482615e67)
+
+Neovim, Feline and matching Tmux Theme
+![scrn-2023-11-02-06-03-05](https://github.com/freddiehaddad/feline.nvim/assets/6127369/80c8ee6a-40c5-43ff-8122-9b0f029182c3)
+
+Configuration can be found in the following [repo] within [feline.lua].
+
+
 ## About
 
 Feline is a Lua statusline, statuscolumn and winbar plugin that prioritizes
@@ -57,77 +72,9 @@ repository is the plugins new home as per
   - [A patched font] - For icon support
   - [gitsigns.nvim] - For git providers
 
-## Screenshots
-
-**NOTE: Some of these configurations may be outdated and may need to be changed
-prior to use. A few of the configurations are missing a link because the link to
-them was removed due to the link no longer being valid.**
-
-**Default setup:**
-![image](https://user-images.githubusercontent.com/29580810/114544000-d3028400-9c7b-11eb-856c-2feb166334b2.png)
-
-**Default no-icons setup:**
-![image](https://user-images.githubusercontent.com/29580810/114742106-36201380-9d6d-11eb-9866-e8c0fef8a1bd.png)
-
-**[Config by freddiehaddad:](https://github.com/freddiehaddad/feline.nvim/discussions/2)**
-![image](https://user-images.githubusercontent.com/6127369/220177261-668841ca-3128-436f-8879-62f145261399.png)
-
-**[Config by crivotz:](https://github.com/crivotz/nv-ide/blob/master/lua/config/plugins/feline.lua)**
-![image](https://user-images.githubusercontent.com/3275600/114841377-0ce89d00-9dd8-11eb-82b4-b3ee332771c2.png)
-
-**[Config by 6cdh:](https://github.com/6cdh/dotfiles/blob/62959d27344dade28d6dd638252cd82accb309ab/nvim/.config/nvim/lua/statusline.lua)**
-![image](https://user-images.githubusercontent.com/39000776/114838041-e68e2600-9e06-11eb-9334-431a627ff144.png)
-
-**Config by luizcoro2:**
-![image](https://user-images.githubusercontent.com/70335871/115327167-dd81b980-a164-11eb-9c02-7a3a1b6a94b5.png)
-
-**Config by rafamadriz (classic):**
-
-**Gruvbox:**
-![image](https://user-images.githubusercontent.com/67771985/116002735-a7bc5500-a5ea-11eb-82e3-86d1837902cf.png)
-**Nord:**
-![image](https://user-images.githubusercontent.com/67771985/116002779-d3d7d600-a5ea-11eb-8772-7cb85d7bc324.png)
-
-**Config by rafamadriz (slant):**
-
-**Gruvbox:**
-![image](https://user-images.githubusercontent.com/67771985/116002799-e94d0000-a5ea-11eb-9472-da0d75bbcceb.png)
-**Nord:**
-![image](https://user-images.githubusercontent.com/67771985/116002808-efdb7780-a5ea-11eb-97eb-caf7875e9a3d.png)
-
-**Config by rafamadriz (VSCode):**
-![image](https://user-images.githubusercontent.com/67771985/117713773-9d42b380-b1c5-11eb-8a8b-76949c9b2db1.png)
-
-**[Config by pianocomposer321:](https://gist.github.com/pianocomposer321/6151c458132a97590d21415db67361a6)**
-![image](https://user-images.githubusercontent.com/54072354/117869424-65d51500-b260-11eb-898c-0a0b987a6275.png)
-
-**Config by iBhagwan:**
-![image](https://user-images.githubusercontent.com/59988195/133922136-3d037c37-7a3f-4e1b-b42e-c50b22fedfdb.png)
-
-**[Config by EdenEast](https://github.com/EdenEast/nyx/blob/8a9819e/config/.config/nvim/lua/eden/modules/ui/feline/init.lua)**
-(Colors generated from applied colorscheme)
-
-**Nightfox**
-![image](https://user-images.githubusercontent.com/2746374/137549252-333f074e-47a0-464f-ac8a-7ce0ee43433c.png)
-
-**Dayfox**
-![image](https://user-images.githubusercontent.com/2746374/137549328-eb5f51c2-bd7b-4c9e-9080-b6132b688459.png)
-
-**[Config by toufyx](https://gist.github.com/Toufyx/d6b48a0a12ceff02268be49db0a97ddf)**
-![image](https://user-images.githubusercontent.com/10991276/187600545-034cf707-08c9-456e-af3e-6d4baf1580a9.png)
-
-**[Config by Hitesh-Aggarwal](https://github.com/Hitesh-Aggarwal/feline_one_monokai.nvim/blob/2ff798d4d0435d2145593587dc93a70e72a6d279/plugin/feline_one_monokai.lua)**
-![image](https://raw.githubusercontent.com/Hitesh-Aggarwal/feline_one_monokai.nvim/2ff798d4d0435d2145593587dc93a70e72a6d279/screenshot.png)
-
-**[Config by Dharmx](https://gist.github.com/dharmx/47139967b0c4303572e3742af725300c)**
-![image](https://user-images.githubusercontent.com/80379926/205459030-1ef38f4f-b364-43ea-876e-db98549c38cd.png)
-
-To share your configuration, start a discussion following this
-[example](https://github.com/freddiehaddad/feline.nvim/discussions/2).
-
 ## Installation
 
-- [lazy.nvim]
+[lazy.nvim]
 
 ```lua
 -- default
@@ -150,13 +97,13 @@ To share your configuration, start a discussion following this
 }
 ```
 
-- [packer.nvim]
+[packer.nvim]
 
 ```lua
 use 'freddiehaddad/feline.nvim'
 ```
 
-- [vim-plug]
+[vim-plug]
 
 ```vim
 Plug 'freddiehaddad/feline.nvim'
@@ -261,13 +208,79 @@ is welcome.
 
 And this plugin is named after cats, you won't get that anywhere else.
 
+## Screenshots
+
+**NOTE: Some of these configurations may be outdated and may need to be changed
+prior to use. A few of the configurations are missing a link because the link to
+them was removed due to the link no longer being valid.**
+
+**Default setup:**
+![image](https://user-images.githubusercontent.com/29580810/114544000-d3028400-9c7b-11eb-856c-2feb166334b2.png)
+
+**Default no-icons setup:**
+![image](https://user-images.githubusercontent.com/29580810/114742106-36201380-9d6d-11eb-9866-e8c0fef8a1bd.png)
+
+**[Config by freddiehaddad:](https://github.com/freddiehaddad/feline.nvim/discussions/2)**
+![image](https://user-images.githubusercontent.com/6127369/220177261-668841ca-3128-436f-8879-62f145261399.png)
+
+**[Config by crivotz:](https://github.com/crivotz/nv-ide/blob/master/lua/config/plugins/feline.lua)**
+![image](https://user-images.githubusercontent.com/3275600/114841377-0ce89d00-9dd8-11eb-82b4-b3ee332771c2.png)
+
+**[Config by 6cdh:](https://github.com/6cdh/dotfiles/blob/62959d27344dade28d6dd638252cd82accb309ab/nvim/.config/nvim/lua/statusline.lua)**
+![image](https://user-images.githubusercontent.com/39000776/114838041-e68e2600-9e06-11eb-9334-431a627ff144.png)
+
+**Config by luizcoro2:**
+![image](https://user-images.githubusercontent.com/70335871/115327167-dd81b980-a164-11eb-9c02-7a3a1b6a94b5.png)
+
+**Config by rafamadriz (classic):**
+
+**Gruvbox:**
+![image](https://user-images.githubusercontent.com/67771985/116002735-a7bc5500-a5ea-11eb-82e3-86d1837902cf.png)
+**Nord:**
+![image](https://user-images.githubusercontent.com/67771985/116002779-d3d7d600-a5ea-11eb-8772-7cb85d7bc324.png)
+
+**Config by rafamadriz (slant):**
+
+**Gruvbox:**
+![image](https://user-images.githubusercontent.com/67771985/116002799-e94d0000-a5ea-11eb-9472-da0d75bbcceb.png)
+**Nord:**
+![image](https://user-images.githubusercontent.com/67771985/116002808-efdb7780-a5ea-11eb-97eb-caf7875e9a3d.png)
+
+**Config by rafamadriz (VSCode):**
+![image](https://user-images.githubusercontent.com/67771985/117713773-9d42b380-b1c5-11eb-8a8b-76949c9b2db1.png)
+
+**[Config by pianocomposer321:](https://gist.github.com/pianocomposer321/6151c458132a97590d21415db67361a6)**
+![image](https://user-images.githubusercontent.com/54072354/117869424-65d51500-b260-11eb-898c-0a0b987a6275.png)
+
+**Config by iBhagwan:**
+![image](https://user-images.githubusercontent.com/59988195/133922136-3d037c37-7a3f-4e1b-b42e-c50b22fedfdb.png)
+
+**[Config by EdenEast](https://github.com/EdenEast/nyx/blob/8a9819e/config/.config/nvim/lua/eden/modules/ui/feline/init.lua)**
+(Colors generated from applied colorscheme)
+
+**Nightfox**
+![image](https://user-images.githubusercontent.com/2746374/137549252-333f074e-47a0-464f-ac8a-7ce0ee43433c.png)
+
+**Dayfox**
+![image](https://user-images.githubusercontent.com/2746374/137549328-eb5f51c2-bd7b-4c9e-9080-b6132b688459.png)
+
+**[Config by toufyx](https://gist.github.com/Toufyx/d6b48a0a12ceff02268be49db0a97ddf)**
+![image](https://user-images.githubusercontent.com/10991276/187600545-034cf707-08c9-456e-af3e-6d4baf1580a9.png)
+
+**[Config by Hitesh-Aggarwal](https://github.com/Hitesh-Aggarwal/feline_one_monokai.nvim/blob/2ff798d4d0435d2145593587dc93a70e72a6d279/plugin/feline_one_monokai.lua)**
+![image](https://raw.githubusercontent.com/Hitesh-Aggarwal/feline_one_monokai.nvim/2ff798d4d0435d2145593587dc93a70e72a6d279/screenshot.png)
+
+**[Config by Dharmx](https://gist.github.com/dharmx/47139967b0c4303572e3742af725300c)**
+![image](https://user-images.githubusercontent.com/80379926/205459030-1ef38f4f-b364-43ea-876e-db98549c38cd.png)
+
+To share your configuration, start a discussion following this
+[example](https://github.com/freddiehaddad/feline.nvim/discussions/2).
+
 ## LICENSE
 
 Feline is licensed under GNU GPLv3. For more info, see: [LICENSE.md].
 
-## Miscellaneous
-
-### Naming
+## Naming
 
 The name of this plugin is a silly pun based on the convention of the names of
 statusline plugins ending with 'line', while also being named after cats. And in
@@ -287,3 +300,5 @@ guess the name fits.
 [packer.nvim]: https://github.com/wbthomason/packer.nvim/
 [usage]: USAGE.md
 [vim-plug]: https://github.com/junegunn/vim-plug/
+[repo]: https://github.com/freddiehaddad/nvim
+[feline.lua]: https://github.com/freddiehaddad/nvim/blob/main/lua/plugins/feline.lua
