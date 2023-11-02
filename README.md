@@ -23,9 +23,8 @@
 </p>
 </div>
 
-A minimal, stylish and customizable statusline, statuscolumn, and winbar for Neovim
-
-Requires Neovim >= 0.7
+A minimal, stylish and customizable statusline, statuscolumn, and winbar for
+Neovim
 
 ## About
 
@@ -44,39 +43,36 @@ repository is the plugins new home as per
 ## Features
 
 - Ease-of-use.
+
 - Complete customizability over every component.
-- [Built-in providers](USAGE.md#default-providers) such as:
+
+- [Built-in providers] such as:
 
   - Vi-mode
   - File info
   - Cursor position
-  - Diagnostics (using
-    [Neovim's built-in LSP](https://neovim.io/doc/user/lsp.html))
-  - Git branch and diffs (using
-    [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim/))
+  - Diagnostics (using [Neovim's built-in LSP])
+  - Git branch and diffs (using [gitsigns.nvim])
 
   and many more
 
 - Minimalistic, only provides the bare minimum and allows the user to build
   their own components very easily.
+
 - Winbar support.
+
 - Statuscolumn support.
 
 ## Requirements
 
 - Necessary
-  - Neovim v0.7 or greater
-  - You must have 24-bit RGB color enabled in Neovim (do `:help 'termguicolors'`
-    in Neovim for more info)
+  - Neovim v0.9+
+  - 24-bit RGB color enabled in Neovim (do `:help 'termguicolors'` in Neovim for
+    more info)
 - Optional
-  - Neovim v0.8 or greater - For winbar support
-  - Neovim v0.9 or greater - For statuscolumn support
-  - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons/) - For
-    icon support
-  - [A patched font](https://github.com/ryanoasis/nerd-fonts/) - For icon
-    support
-  - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim/) - For git
-    providers
+  - [nvim-web-devicons] - For icon support
+  - [A patched font] - For icon support
+  - [gitsigns.nvim] - For git providers
 
 ## Screenshots
 
@@ -148,19 +144,36 @@ To share your configuration, start a discussion following this
 
 ## Installation
 
-- [lazy.nvim](https://github.com/folke/lazy.nvim):
+- [lazy.nvim]
 
 ```lua
-{ 'freddiehaddad/feline.nvim' }
+-- default
+{
+    'freddiehaddad/feline.nvim',
+    opts = {}
+}
+
+-- with extras
+{
+    'freddiehaddad/feline.nvim',
+    opts = {},
+    config = function(_, opts)
+        require('feline').setup()
+        require('feline').winbar.setup()       -- to use winbar
+        require('feline').statuscolumn.setup() -- to use statuscolumn
+
+        require('feline').use_theme()          -- to use a custom theme
+    end
+}
 ```
 
-- [packer.nvim](https://github.com/wbthomason/packer.nvim/):
+- [packer.nvim]
 
 ```lua
 use 'freddiehaddad/feline.nvim'
 ```
 
-- [vim-plug](https://github.com/junegunn/vim-plug/):
+- [vim-plug]
 
 ```vim
 Plug 'freddiehaddad/feline.nvim'
@@ -196,10 +209,9 @@ require('feline').statuscolumn.setup()
 
 If the default configuration doesn't suit your needs, Feline provides plenty of
 customization options enabling you to configure everything exactly how you want.
-The only prerequisite is knowing the basics of Lua. Refer to the
-[USAGE](USAGE.md) documentation or use `:help feline.txt` inside Neovim to read
-the USAGE docs. Additionally, you may find it helpful to look at the community
-configurations.
+The only prerequisite is knowing the basics of Lua. Refer to the [USAGE]
+documentation or use `:help feline.txt` inside Neovim to read the USAGE docs.
+Additionally, you may find it helpful to look at the community configurations.
 
 ## Help
 
@@ -216,10 +228,10 @@ Feline.
 ### Reporting issues or feature requests
 
 If you have an issue that you can't find the fix to in the documentation or want
-to request a feature you think is absolutely necessary, feel free to make a new
-[Issue](https://github.com/freddiehaddad/feline.nvim/issues) and I will try my
-best to look into it. If you want to contribute to Feline, you can make a Pull
-Request. For more details, please see: [CONTRIBUTING](CONTRIBUTING.md)
+to request a feature you think is absolutely necessary, feel free to open a new
+[Issue] and I will try my best to look into it. If you want to contribute to
+Feline, you can make a Pull Request. For more details, please see:
+[CONTRIBUTING]
 
 ## Why Feline?
 
@@ -231,8 +243,8 @@ I'd like to preface this by saying that what I'm about to say can be (and
 probably is) very biased and opinionated. Take what's being said here with a
 grain of salt. All of this is purely my opinion and not a fact by any means, so
 it's fine to disagree. Moreover, any statement I make here may be incorrect or
-outdated. In which case, please feel free to make an
-[Issue or Pull Request](CONTRIBUTING.md) correcting it.
+outdated. In which case, please feel free to open an [Issue or Pull Request]
+correcting it.
 
 I think that despite those plugins being neat, each have their own shortcomings.
 I find those shortcomings as too much to ignore. For example, most of the
@@ -260,16 +272,15 @@ anyone to be able to build their statusline as they wish to. It provides example
 for every option to allow anyone to easily understand the purpose of any option
 
 Lastly, anyone is welcome to contribute to Feline, either by making an Issue or
-through a Pull Request (see [CONTRIBUTING](CONTRIBUTING.md) for further
-information). Any kind of contribution starting from fixing a minor typo to
-adding a massive new feature is welcome.
+through a Pull Request (see [CONTRIBUTING] for further information). Any kind of
+contribution starting from fixing a minor typo to adding a massive new feature
+is welcome.
 
 And this plugin is named after cats, you won't get that anywhere else.
 
 ## LICENSE
 
-Feline is licensed under GNU GPLv3. For more info, see:
-[LICENSE.md](LICENSE.md).
+Feline is licensed under GNU GPLv3. For more info, see: [LICENSE.md].
 
 ## Miscellaneous
 
@@ -279,3 +290,17 @@ The name of this plugin is a silly pun based on the convention of the names of
 statusline plugins ending with 'line', while also being named after cats. And in
 a way this statusline is supposed to be as quick as a cat's instincts, so I
 guess the name fits.
+
+[a patched font]: https://github.com/ryanoasis/nerd-fonts
+[built-in providers]: USAGE.md#default-providers
+[contributing]: CONTRIBUTING.md
+[gitsigns.nvim]: https://github.com/lewis6991/gitsigns.nvim/
+[issue]: https://github.com/freddiehaddad/feline.nvim/issues
+[issue or pull request]: CONTRIBUTING.md
+[lazy.nvim]: https://github.com/folke/lazy.nvim
+[license.md]: LICENSE.md
+[neovim's built-in lsp]: https://neovim.io/doc/user/lsp.html
+[nvim-web-devicons]: https://github.com/kyazdani42/nvim-web-devicons/
+[packer.nvim]: https://github.com/wbthomason/packer.nvim/
+[usage]: USAGE.md
+[vim-plug]: https://github.com/junegunn/vim-plug/
