@@ -5,7 +5,6 @@
 ![GitHub issues](https://img.shields.io/github/issues/freddiehaddad/feline.nvim?style=for-the-badge)
 ![GitHub Discussions](https://img.shields.io/github/discussions/freddiehaddad/feline.nvim?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/freddiehaddad/feline.nvim?style=for-the-badge)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/freddiehaddad/feline.nvim?style=for-the-badge)
 
 A minimal, stylish and customizable statusline, statuscolumn, and winbar for
 Neovim
