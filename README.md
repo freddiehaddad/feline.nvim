@@ -1,6 +1,11 @@
 # feline.nvim
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=freddiehaddad&repo=feline.nvim)](https://github.com/anuraghazra/github-readme-stats)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/freddiehaddad/feline.nvim/main?style=for-the-badge)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/freddiehaddad/feline.nvim?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/freddiehaddad/feline.nvim?style=for-the-badge)
+![GitHub Discussions](https://img.shields.io/github/discussions/freddiehaddad/feline.nvim?style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/freddiehaddad/feline.nvim?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/freddiehaddad/feline.nvim?style=for-the-badge)
 
 A minimal, stylish and customizable statusline, statuscolumn, and winbar for
 Neovim
