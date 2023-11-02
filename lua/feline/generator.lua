@@ -25,7 +25,8 @@ end
 -- If highlight is a string, use it as highlight name and
 -- extract the properties from the highlight
 local function get_hl_properties(hlname)
-    local hl = api.nvim_get_hl_by_name(hlname, true)
+    local opts = { name = hlname }
+    local hl = api.nvim_get_hl(0, opts)
     local styles = {}
 
     for k, v in ipairs(hl) do
