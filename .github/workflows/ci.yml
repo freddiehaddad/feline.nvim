@@ -11,23 +11,21 @@ permissions:
 jobs:
   docs:
     runs-on: ubuntu-latest
+    name: vimdoc
     steps:
       - uses: actions/checkout@v3
-      - name: panvimdoc
-        uses: kdheepak/panvimdoc@main
+      - uses: kdheepak/panvimdoc@main
         with:
           vimdoc: feline
           pandoc: USAGE.md
-          version: "Neovim >= 0.9.0"
+          version: "NVIM 0.9.0+"
+          toc: true
           treesitter: true
           dedupsubheadings: false
-      - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "chore(build): auto-generate vimdoc"
-          commit_user_name: "github-actions[bot]"
-          commit_user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          commit_message: "chore(docs): auto-generate vimdoc"
+          branch: ${{ github.head_ref }}
 
   release-please:
     runs-on: ubuntu-latest
@@ -36,5 +34,5 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v3
         with:
-          release-type: go
-          package-name: swaybar
+          release-type: simple
+          package-name: feline
