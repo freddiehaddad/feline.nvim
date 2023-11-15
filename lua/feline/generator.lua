@@ -514,7 +514,13 @@ local function get_component_width(component_str)
         return 0
     end
 
-    return api.nvim_eval_statusline(component_str, { maxwidth = 0 }).width
+    local ok, result = pcall(api.nvim_eval_statusline, component_str, { maxwidth = 0 })
+
+    if not ok then
+        return 0
+    end
+
+    return result.width
 end
 
 function Generator:trigger_provider_update(winid, section_nr, component_nr)
