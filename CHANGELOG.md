@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/freddiehaddad/feline.nvim/compare/v1.2.3...v1.2.4) (2023-11-18)
+
+
+### Bug Fixes
+
+* **lsp:** update deprecated function calls ([#47](https://github.com/freddiehaddad/feline.nvim/issues/47)) ([4b0a439](https://github.com/freddiehaddad/feline.nvim/commit/4b0a4395c044302e79d536e739f482a316954954))
+
 ## [1.2.3](https://github.com/freddiehaddad/feline.nvim/compare/v1.2.2...v1.2.3) (2023-11-02)
 
 
