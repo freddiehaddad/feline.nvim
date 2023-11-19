@@ -81,18 +81,21 @@ function M.file_info(component, opts)
     local readonly_str, modified_str, icon
 
     -- Avoid loading nvim-web-devicons if an icon is provided already
-    if not component.icon then
+    if not component.icon or type(component.icon) == 'table' then
         local icon_str, icon_color = require('nvim-web-devicons').get_icon_color(
             fn.expand('%:t'),
             nil, -- extension is already computed by nvim-web-devicons
             { default = true }
         )
 
-        icon = { str = icon_str }
+        local default_icon = {}
+        default_icon.str = icon_str
 
         if opts.colored_icon == nil or opts.colored_icon then
-            icon.hl = { fg = icon_color }
+            default_icon.hl = { fg = icon_color }
         end
+
+        icon = vim.tbl_deep_extend('keep', component.icon or {}, default_icon)
     end
 
     local filename = api.nvim_buf_get_name(0)
@@ -168,23 +171,25 @@ function M.file_type(component, opts)
     local filetype = bo.filetype
     local icon
 
-    -- Avoid loading nvim-web-devicons if an icon is provided already
     if opts.filetype_icon then
-        if not component.icon then
+        if not component.icon or type(component.icon) == 'table' then
             local icon_str, icon_color = require('nvim-web-devicons').get_icon_color(
                 fn.expand('%:t'),
                 nil, -- extension is already computed by nvim-web-devicons
                 { default = true }
             )
 
-            icon = { str = icon_str }
+            local default_icon = {}
+            default_icon.str = icon_str
 
             if opts.colored_icon ~= false then
-                icon.hl = { fg = icon_color }
+                default_icon.hl = { fg = icon_color }
             end
-        end
 
-        filetype = ' ' .. filetype
+            icon = vim.tbl_deep_extend('keep', component.icon or {}, default_icon)
+
+            filetype = ' ' .. filetype
+        end
     end
 
     if opts.case == 'titlecase' then
