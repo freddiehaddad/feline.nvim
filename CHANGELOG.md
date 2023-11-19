@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.2.4...v1.3.0) (2023-11-19)
+
+
+### Features
+
+* missing icon keys will be set to the default ([#49](https://github.com/freddiehaddad/feline.nvim/issues/49)) ([#51](https://github.com/freddiehaddad/feline.nvim/issues/51)) ([b315e31](https://github.com/freddiehaddad/feline.nvim/commit/b315e3173010d6d0cc9886af96df3c293627576d))
+
+
+### Bug Fixes
+
+* **diagnostics:** disable undefined-field warnings ([#50](https://github.com/freddiehaddad/feline.nvim/issues/50)) ([3eecdab](https://github.com/freddiehaddad/feline.nvim/commit/3eecdabbe1925564f8320638b29e5b1ace2bc8f5))
+
 ## [1.2.4](https://github.com/freddiehaddad/feline.nvim/compare/v1.2.3...v1.2.4) (2023-11-18)
 
 
