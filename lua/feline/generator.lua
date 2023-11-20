@@ -463,7 +463,11 @@ local function parse_component(gen, component, use_short_provider, winid, sectio
 
     local right_sep_str = parse_sep_list(gen, component.right_sep, hl.bg, is_component_empty)
 
-    icon = parse_icon(gen, component.icon or icon, hl, is_component_empty)
+    if component.icon and type(component.icon) ~= 'table' then
+        icon = component.icon
+    end
+
+    icon = parse_icon(gen, icon, hl, is_component_empty)
 
     return string.format(
         '%s%s%%#%s#%s%s',
