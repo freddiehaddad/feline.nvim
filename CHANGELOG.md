@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.3.0...v1.3.1) (2023-11-20)
+
+
+### Bug Fixes
+
+* **icon:** prefer component icon over default ([#53](https://github.com/freddiehaddad/feline.nvim/issues/53)) ([77e119d](https://github.com/freddiehaddad/feline.nvim/commit/77e119da2cd129c6dcbcd169ae2cede606d712fd))
+
 ## [1.3.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.2.4...v1.3.0) (2023-11-19)
 
 
