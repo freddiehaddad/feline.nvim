@@ -1,4 +1,4 @@
-*feline.txt*           For NVIM 0.9.0+           Last change: 2023 November 19
+*feline.txt*           For NVIM 0.9.0+           Last change: 2023 November 20
 
 ==============================================================================
 Table of Contents                                   *feline-table-of-contents*
