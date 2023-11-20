@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/freddiehaddad/feline.nvim/compare/v1.3.1...v1.3.2) (2023-11-20)
+
+
+### Bug Fixes
+
+* **icon:** use component.icon when its not a table ([#49](https://github.com/freddiehaddad/feline.nvim/issues/49)) ([#55](https://github.com/freddiehaddad/feline.nvim/issues/55)) ([1dcf6bf](https://github.com/freddiehaddad/feline.nvim/commit/1dcf6bf0b7fcaf2a2cddec377266eb2e6a41492e))
+
 ## [1.3.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.3.0...v1.3.1) (2023-11-20)
 
 
