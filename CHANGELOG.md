@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/freddiehaddad/feline.nvim/compare/v1.3.2...v1.3.3) (2023-11-28)
+
+
+### Bug Fixes
+
+* merge icon tables preferring user values ([#58](https://github.com/freddiehaddad/feline.nvim/issues/58)) ([a50df1f](https://github.com/freddiehaddad/feline.nvim/commit/a50df1fac6fe04eac1ad5491145ffb8dd2fe22db))
+
 ## [1.3.2](https://github.com/freddiehaddad/feline.nvim/compare/v1.3.1...v1.3.2) (2023-11-20)
 
 
