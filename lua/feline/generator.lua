@@ -463,8 +463,12 @@ local function parse_component(gen, component, use_short_provider, winid, sectio
 
     local right_sep_str = parse_sep_list(gen, component.right_sep, hl.bg, is_component_empty)
 
-    if component.icon and type(component.icon) ~= 'table' then
-        icon = component.icon
+    if component.icon then
+        if type(component.icon) == 'table' and type(icon) == 'table' then
+            icon = vim.tbl_deep_extend('keep', component.icon, icon)
+        else
+            icon = component.icon
+        end
     end
 
     icon = parse_icon(gen, icon, hl, is_component_empty)
