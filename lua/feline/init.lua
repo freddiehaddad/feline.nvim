@@ -178,7 +178,7 @@ end
 
 function M.setup(config)
     -- Check if termguicolors is enabled
-    if not vim.o.termguicolors then
+    if not vim.o.termguicolors and vim.version().minor < 10 then
         api.nvim_err_writeln(
             "Feline needs 'termguicolors' to be enabled to work properly\n"
                 .. "Please do `:help 'termguicolors'` in Neovim for more information"
