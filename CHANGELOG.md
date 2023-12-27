@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.4](https://github.com/freddiehaddad/feline.nvim/compare/v1.3.3...v1.3.4) (2023-12-27)
+
+
+### Bug Fixes
+
+* only error on termguicolors not set for version.minor &lt; 10 ([9cbace2](https://github.com/freddiehaddad/feline.nvim/commit/9cbace2bc3b6b8082672b8ded41f691cad679e05))
+
 ## [1.3.3](https://github.com/freddiehaddad/feline.nvim/compare/v1.3.2...v1.3.3) (2023-11-28)
 
 
