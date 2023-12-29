@@ -817,7 +817,7 @@ Feline by default has some built-in providers to make your life easy. They are:
 | ------------------------------------- | ---------------------------------------------- |
 | [`vi_mode`](#vi-mode)                 | Current vim mode                               |
 | [`position`](#position)               | Get line and column number of cursor           |
-| `line_percentage`                     | Current line percentage                        |
+| [`line_percentage`](#line-percentage) | Current line percentage                        |
 | [`scroll_bar`](#scroll-bar)           | Scroll bar that shows file progress            |
 | [`search_count`](#search-count)       | Search count for current search                |
 | `macro`                               | Shows macro being recorded                     |
@@ -921,6 +921,10 @@ respectively. For example:
 ```lua
 format = 'Ln {line}, Col {col}'
 ```
+
+### Line Percentage
+
+The `line_percentage` provider can take a `padding` which may be either `true` or `false`. The default is `false`.
 
 ### Scroll bar
 

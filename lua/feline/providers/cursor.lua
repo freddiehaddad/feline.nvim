@@ -49,16 +49,19 @@ function M.position(_, opts)
     end
 end
 
-function M.line_percentage()
+function M.line_percentage(_, opts)
     local curr_line = api.nvim_win_get_cursor(0)[1]
     local lines = api.nvim_buf_line_count(0)
 
-    if curr_line == 1 then
+    if lines == 1 then
+        return 'All'
+    elseif curr_line == 1 then
         return 'Top'
     elseif curr_line == lines then
         return 'Bot'
     else
-        return string.format('%2d%%%%', math.ceil(curr_line / lines * 99))
+        local format = opts.padding and '%2d%%%%' or '%d%%%%'
+        return string.format(format, math.ceil(curr_line / lines * 99))
     end
 end
 
