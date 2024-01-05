@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.3.4...v1.4.0) (2024-01-05)
+
+
+### Features
+
+* **providers:** line_percentage padding option ([63df940](https://github.com/freddiehaddad/feline.nvim/commit/63df9405c134efda706f4c264c8dd20810a205d6))
+
 ## [1.3.4](https://github.com/freddiehaddad/feline.nvim/compare/v1.3.3...v1.3.4) (2023-12-27)
 
 
