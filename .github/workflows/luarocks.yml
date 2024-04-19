@@ -29,4 +29,3 @@ jobs:
           version: ${{ env.LUAROCKS_VERSION }}
           dependencies: |
             nvim-web-devicons
-            gitsigns.nvim
