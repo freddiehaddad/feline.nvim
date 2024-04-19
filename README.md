@@ -23,7 +23,6 @@ Neovim, Feline and matching Tmux Theme
 
 Configuration can be found in the following [repo] within [feline.lua].
 
-
 ## About
 
 Feline is a Lua statusline, statuscolumn and winbar plugin that prioritizes
@@ -73,6 +72,12 @@ repository is the plugins new home as per
   - [gitsigns.nvim] - For git providers
 
 ## Installation
+
+This plugin is available on [LuaRocks]:
+
+```text
+:Rocks install feline.nvim
+```
 
 [lazy.nvim]
 
@@ -290,15 +295,16 @@ guess the name fits.
 [a patched font]: https://github.com/ryanoasis/nerd-fonts
 [built-in providers]: USAGE.md#default-providers
 [contributing]: CONTRIBUTING.md
+[feline.lua]: https://github.com/freddiehaddad/nvim/blob/main/lua/plugins/feline.lua
 [gitsigns.nvim]: https://github.com/lewis6991/gitsigns.nvim/
 [issue]: https://github.com/freddiehaddad/feline.nvim/issues
 [issue or pull request]: CONTRIBUTING.md
 [lazy.nvim]: https://github.com/folke/lazy.nvim
 [license.md]: LICENSE.md
+[luarocks]: https://luarocks.org/modules/freddiehaddad/feline.nvim
 [neovim's built-in lsp]: https://neovim.io/doc/user/lsp.html
 [nvim-web-devicons]: https://github.com/kyazdani42/nvim-web-devicons/
 [packer.nvim]: https://github.com/wbthomason/packer.nvim/
+[repo]: https://github.com/freddiehaddad/nvim
 [usage]: USAGE.md
 [vim-plug]: https://github.com/junegunn/vim-plug/
-[repo]: https://github.com/freddiehaddad/nvim
-[feline.lua]: https://github.com/freddiehaddad/nvim/blob/main/lua/plugins/feline.lua
