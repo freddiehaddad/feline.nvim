@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.4.0...v1.5.0) (2024-04-19)
+
+
+### Features
+
+* luarocks/rocks.nvim support ([#71](https://github.com/freddiehaddad/feline.nvim/issues/71)) ([acf089e](https://github.com/freddiehaddad/feline.nvim/commit/acf089eecc1c2441f897b283cdfd2b44e4998629))
+
 ## [1.4.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.3.4...v1.4.0) (2024-01-05)
 
 
