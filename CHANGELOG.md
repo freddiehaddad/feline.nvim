@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.5.0...v1.5.1) (2024-04-19)
+
+
+### Bug Fixes
+
+* register rockspec with luarocks ([#74](https://github.com/freddiehaddad/feline.nvim/issues/74)) ([cfd138c](https://github.com/freddiehaddad/feline.nvim/commit/cfd138cbdeb6266bb7e400f12de4c795079f3be1))
+
 ## [1.5.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.4.0...v1.5.0) (2024-04-19)
 
 
