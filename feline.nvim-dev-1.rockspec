@@ -1,7 +1,7 @@
 package = "feline.nvim"
 version = "dev-1"
 source = {
-   url = "git+ssh://git@github.com/freddiehaddad/feline.nvim.git"
+   url = "https://github.com/freddiehaddad/feline.nvim.git"
 }
 description = {
    detailed = [[
