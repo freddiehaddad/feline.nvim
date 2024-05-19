@@ -1,5 +1,2 @@
 doc/tags
-/luarocks
 /lua
-/lua_modules
-/.luarocks

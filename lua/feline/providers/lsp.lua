@@ -4,7 +4,12 @@ local lsp = vim.lsp
 local diagnostic = vim.diagnostic
 
 function M.is_lsp_attached()
-    return next(lsp.get_active_clients { bufnr = 0 }) ~= nil
+    if vim.fn.has('nvim-0.10') > 0 then
+        return next(lsp.get_clients { bufnr = 0 }) ~= nil
+    else
+        ---@diagnostic disable-next-line: deprecated
+        return next(lsp.get_active_clients { bufnr = 0 }) ~= nil
+    end
 end
 
 function M.get_diagnostics_count(severity)
@@ -17,9 +22,15 @@ end
 
 function M.lsp_client_names()
     local clients = {}
-
-    for _, client in pairs(lsp.get_active_clients { bufnr = 0 }) do
-        clients[#clients + 1] = client.name
+    if vim.fn.has('nvim-0.10') > 0 then
+        for _, client in pairs(lsp.get_clients { bufnr = 0 }) do
+            clients[#clients + 1] = client.name
+        end
+    else
+        ---@diagnostic disable-next-line: deprecated
+        for _, client in pairs(lsp.get_active_clients { bufnr = 0 }) do
+            clients[#clients + 1] = client.name
+        end
     end
 
     return table.concat(clients, ' '), ' '
