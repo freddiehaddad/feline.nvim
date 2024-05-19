@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.5.1...v1.6.0) (2024-05-19)
+
+
+### Features
+
+* **lsp:** add support for neovim 0.10 lsp api ([#82](https://github.com/freddiehaddad/feline.nvim/issues/82)) ([43766d0](https://github.com/freddiehaddad/feline.nvim/commit/43766d0ec2069d1b2893537c6534733d5123ef4f))
+
 ## [1.5.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.5.0...v1.5.1) (2024-04-19)
 
 
