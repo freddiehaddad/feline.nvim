@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.0...v1.6.1) (2024-05-24)
+
+
+### Bug Fixes
+
+* **luarocks:** add nvim-web-devicons dependency ([#84](https://github.com/freddiehaddad/feline.nvim/issues/84)) ([524be74](https://github.com/freddiehaddad/feline.nvim/commit/524be74c92bc2e5c4f35412169db4c70eedcd77f))
+
 ## [1.6.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.5.1...v1.6.0) (2024-05-19)
 
 
