@@ -27,3 +27,5 @@ jobs:
           LUAROCKS_API_KEY: ${{ secrets.LUAROCKS_API_KEY }}
         with:
           version: ${{ env.LUAROCKS_VERSION }}
+          dependencies: |
+            nvim-web-devicons
