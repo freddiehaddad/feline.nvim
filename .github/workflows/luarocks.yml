@@ -1,16 +1,8 @@
----
 name: Push to Luarocks
-
 on:
   push:
-    tags:
-      - '*'
-  release:
-    types:
-      - created
-    tags:
-      - '*'
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
   luarocks-upload:
