@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.2](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.1...v1.6.2) (2024-05-25)
+
+
+### Bug Fixes
+
+* **luarocks:** trigger on push to main ([#86](https://github.com/freddiehaddad/feline.nvim/issues/86)) ([fa9ce3c](https://github.com/freddiehaddad/feline.nvim/commit/fa9ce3c1c2fe37170090c494027d34851e04bda5))
+
 ## [1.6.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.0...v1.6.1) (2024-05-24)
 
 
