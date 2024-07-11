@@ -37,8 +37,8 @@ local function get_hl_properties(hlname)
 
     return {
         name = hlname,
-        fg = hl.foreground and string.format('#%06x', hl.foreground),
-        bg = hl.background and string.format('#%06x', hl.background),
+        fg = hl.fg and string.format('#%06x', hl.fg),
+        bg = hl.bg and string.format('#%06x', hl.bg),
         style = next(styles) and table.concat(styles, ',') or 'NONE',
     }
 end
