@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.3](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.2...v1.6.3) (2024-07-11)
+
+
+### Bug Fixes
+
+* use correct keys on table from nvim_get_hl ([#90](https://github.com/freddiehaddad/feline.nvim/issues/90)) ([71c969b](https://github.com/freddiehaddad/feline.nvim/commit/71c969b2df97041d1dd449e1544656f58cdf6c95)), closes [#89](https://github.com/freddiehaddad/feline.nvim/issues/89)
+
 ## [1.6.2](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.1...v1.6.2) (2024-05-25)
 
 
