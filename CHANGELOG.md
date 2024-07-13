@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.4](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.3...v1.6.4) (2024-07-13)
+
+
+### Bug Fixes
+
+* **provider[search-count]:** Use pcall when querying search count ([#92](https://github.com/freddiehaddad/feline.nvim/issues/92)) ([#93](https://github.com/freddiehaddad/feline.nvim/issues/93)) ([b0ed5b4](https://github.com/freddiehaddad/feline.nvim/commit/b0ed5b41b0dff78021d9c989160564a286054f45))
+
 ## [1.6.3](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.2...v1.6.3) (2024-07-11)
 
 
