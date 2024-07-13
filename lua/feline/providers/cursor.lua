@@ -81,13 +81,13 @@ function M.search_count()
         return ''
     end
 
-    local result = vim.fn.searchcount { maxcount = 999, timeout = 250 }
-
-    if result.incomplete == 1 or next(result) == nil then
+    local ok, result = pcall(vim.fn.searchcount, { maxcount = 999, timeout = 250 })
+    if not ok or next(result) == nil or result.incomplete == 1 then
         return ''
     end
 
-    return string.format('[%d/%d]', result.current, math.min(result.total, result.maxcount))
+    local denominator = math.min(result.total, result.maxcount)
+    return string.format('[%d/%d]', result.current, denominator)
 end
 
 function M.macro()
