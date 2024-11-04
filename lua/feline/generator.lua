@@ -134,6 +134,7 @@ local function parse_hl(hl, parent_hl, gen)
     end
 
     return {
+        name = hl.name,
         fg = fg,
         bg = bg,
         style = style,
