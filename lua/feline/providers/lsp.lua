@@ -13,7 +13,10 @@ function M.is_lsp_attached()
 end
 
 function M.get_diagnostics_count(severity)
-    return vim.tbl_count(diagnostic.get(0, severity and { severity = severity }))
+  local opts = severity and { severity = severity }
+  return (diagnostic.count and severity)
+      and diagnostic.count(0, opts)[severity]
+      or vim.tbl_count(diagnostic.get(0, opts))
 end
 
 function M.diagnostics_exist(severity)
