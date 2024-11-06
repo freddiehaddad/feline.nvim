@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.5](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.4...v1.6.5) (2024-11-06)
+
+
+### Performance Improvements
+
+* **get_hlname:** actually use `hl.name` ([#98](https://github.com/freddiehaddad/feline.nvim/issues/98)) ([92ce0b7](https://github.com/freddiehaddad/feline.nvim/commit/92ce0b772337cb73414b4ed373c88026ddeca211))
+
 ## [1.6.4](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.3...v1.6.4) (2024-07-13)
 
 
