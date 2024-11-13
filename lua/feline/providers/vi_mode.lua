@@ -85,7 +85,7 @@ function M.vi_mode(component, opts)
         str = ''
     end
 
-    return str, { str = ' ', always_visible = true }
+    return str, { str = ' ', always_visible = true }
 end
 
 return M
