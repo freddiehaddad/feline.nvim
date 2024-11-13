@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/freddiehaddad/feline.nvim/compare/v1.7.0...v1.7.1) (2024-11-13)
+
+
+### Bug Fixes
+
+* **hl:** follow linked highlight groups to get correct color ([#103](https://github.com/freddiehaddad/feline.nvim/issues/103)) ([e49fc3f](https://github.com/freddiehaddad/feline.nvim/commit/e49fc3f052eac24c56c5aae6140c4347ae7d198f))
+
 ## [1.7.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.5...v1.7.0) (2024-11-13)
 
 
