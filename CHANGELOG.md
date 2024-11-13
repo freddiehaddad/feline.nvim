@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.5...v1.7.0) (2024-11-13)
+
+
+### Features
+
+* **icon:** use the new neovim icon in the nerd font library ([#101](https://github.com/freddiehaddad/feline.nvim/issues/101)) ([1b1f200](https://github.com/freddiehaddad/feline.nvim/commit/1b1f200ef9b06f65da58cf78b9ed4e0e2d1e3d4e))
+
 ## [1.6.5](https://github.com/freddiehaddad/feline.nvim/compare/v1.6.4...v1.6.5) (2024-11-06)
 
 
